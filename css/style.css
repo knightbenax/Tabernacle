@@ -324,6 +324,11 @@ right:0px;
   color: #fff;
 }
 
+.download_link {
+    visibility:hidden;
+    display: none;
+}
+
 
 .demos .second .trex{
 
@@ -415,9 +420,9 @@ right:0px;
 }
 
 .canvasholder{
-  width: 400px;
+  width: 450px;
   margin: auto;
-  height: 400px;
+  height: 450px;
 }
 
 .canvasholder canvas, .canvasholder img{

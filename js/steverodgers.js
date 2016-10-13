@@ -35,21 +35,32 @@ function downloadImage(){
   var ctx = canvas.getContext('2d');
 
   var img = new Image();
-  img.src = "img/y.png";
+  img.src = "img/z.png";
   img.onload = function() {
 
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
     var dt = canvas.toDataURL('image/png');
-/* Change MIME type to trick the browser to downlaod the file instead of displaying it */
-dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
+      /* Change MIME type to trick the browser to downlaod the file instead of displaying it */
+    dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
 
-/* In addition to <a>'s "download" attribute, you can define HTTP-style headers */
-dt = dt.replace(/^data:application\/octet-stream/, 'data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename=Canvas.png');
+      /* In addition to <a>'s "download" attribute, you can define HTTP-style headers */
+    dt = dt.replace(/^data:application\/octet-stream/, 'data:application/octet-stream;headers=Content-Disposition:attachment;filename=CJ_Display_picture.png');
 
-this.href = dt;
+    var link = document.getElementById("downloadJigga");
+    link.href = dt;
 
+    canvas.toBlob(function(blob) {
+            saveAs(blob, "CJ_Display_picture.png");
+    }, "image/png");
+
+    //window.location.href = dt;
+    //alert(dt);
   }
+
+  //$(".download_link").click();
+  //$("#downloadJigga").trigger('click');
+  //$("#downloadJigga").click();
 
 }
 
