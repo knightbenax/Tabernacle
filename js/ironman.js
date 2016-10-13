@@ -1,17 +1,19 @@
 $(function() {
 
-	var	maxWidth = 400,
-		maxHeight = 400,
-		photo = $('#photo'),
-		originalCanvas = null,
-		filters = $('#filters li a'),
+		//var	maxWidth = 400,
+		//maxHeight = 400,
+		//photo = $('#photo'),
+		//originalCanvas = null,
+		var filters = $('#filters li a'),
+		photo = $('.canvasholder'),
+		this_photo = $("#that_guy"),
 		filterContainer = $('#filterContainer');
 
 	// Use the fileReader plugin to listen for
 	// file drag and drop on the photo div:
 
 	//photo.fileReaderJS({
-  var opts = {
+  /*var opts = {
 		on:{
 			load: function(e, file){
 
@@ -111,11 +113,17 @@ $(function() {
 			}
 		}
 	//});
-  };
+};*/
 
 	// Listen for clicks on the filters
 
+	var pages = [].slice.call(document.querySelectorAll('.canvasholder > .that_guy'));
+
+	console.log(pages.length);
+
 	filters.click(function(e){
+
+		var originalCanvas = $(".canvasholder canvas");
 
 		e.preventDefault();
 
@@ -130,23 +138,23 @@ $(function() {
 		f.addClass('active');
 
 		// Clone the canvas
-		var clone = originalCanvas.clone();
+		//var clone = originalCanvas.clone();
+		var clone = this_photo.clone();
 
 		// Clone the image stored in the canvas as well
-		clone[0].getContext('2d').drawImage(originalCanvas[0], 0,0);
-
+		//clone[0].getContext('2d').drawImage(originalCanvas[0], 0, 0);
 		// Add the clone to the page and trigger
 		// the Caman library on it
-
 		photo.html(clone);
 
 		var effect = $.trim(f[0].id);
 
+		console.log(effect);
+
 		Caman(clone[0], function () {
-
 			// If such an effect exists, use it:
-
-			if( effect in this){
+			if(effect in this){
+				//alert("bass");
 				this[effect]();
 				this.render();
 			}
@@ -164,6 +172,6 @@ $(function() {
 
 	});
 
-  FileReaderJS.setupInput(document.getElementById('upload_ninja'), opts);
+  //FileReaderJS.setupInput(document.getElementById('upload_ninja'), opts);
 
 });

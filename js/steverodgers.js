@@ -1,7 +1,60 @@
 function showImage(){
-  //var img = document.createElement("img");
-  //$("#photo").append(img);
+  var result = cropper.getCroppedCanvas();
+
+  $//(".canvasholder").html(result);
+
+  var dataURL = result.toDataURL("image/png");
+
+  //$(".canvasholder canvas").attr("data-caman-hidpi", dataURL);
+
+  $(".that_guy").attr("src", dataURL);
+
+  /*var pages = [].slice.call(document.querySelectorAll('.canvasholder > .that_guy'));
+
+  var effect = ["normal", "vintage", "lomo", "clarity", "sinCity"];
+
+  //console.log(pages.length);
+
+  for (var i = 0; i < pages.length; i++){
+    Caman(pages[i], function () {
+      // If such an effect exists, use it:
+      //if(effect in this){
+        alert("bass");
+        this.sunrise();
+        this.render();
+      //}
+    });
+  }*/
+
+
 }
+
+function downloadImage(){
+
+  var canvas = document.getElementById('image-filter-canvas');
+  var ctx = canvas.getContext('2d');
+
+  var img = new Image();
+  img.src = "img/y.png";
+  img.onload = function() {
+
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+    var dt = canvas.toDataURL('image/png');
+/* Change MIME type to trick the browser to downlaod the file instead of displaying it */
+dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
+
+/* In addition to <a>'s "download" attribute, you can define HTTP-style headers */
+dt = dt.replace(/^data:application\/octet-stream/, 'data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename=Canvas.png');
+
+this.href = dt;
+
+  }
+
+}
+
+var cropper;
+
 
 function showPreview(element) {
     NProgress.start();
@@ -30,25 +83,38 @@ function showPreview(element) {
                     //n = input.files[i].name,
                     //s = ~ ~(file.size / 1024) + 'KB';
                     holder.src = oFREvent.target.result;
+
+                    NProgress.done();
+
+                    if(cropper != null){
+                      cropper.destroy();
+                      cropper.reset();
+                      //alert("Balls");
+                    }
                     //$('.coverupload').addClass('imageadded');
                     //holder.style.backgroundImage = "url('" + oFREvent.target.result + "')";
-                    NProgress.done();
+                    var image = document.getElementById('user_blob');
+                    cropper = new Cropper(image, {
+                      aspectRatio: 4 / 4,
+                      movable: false,
+                      zoomable: false,
+                      scalable: false,
+                      rotatable: false,
+                      crop: function(e) {
+                        //console.log(e.detail.x);
+                        //console.log(e.detail.y);
+                        //console.log(e.detail.width);
+                        //console.log(e.detail.height);
+
+                        $("#user_instruction").css("display", "block");
+
+                        $("#user_control").css("display", "block");
+                      }
+                    });
+
+                    $("#user_blob").css("display", "block");
+                    $("#user_blob").css("opacity", "1");
                 };
-
-                $("#user_blob").css("display", "block");
-                $("#user_blob").css("opacity", "1");
-
-                var image = document.getElementById('user_blob');
-                var cropper = new Cropper(image, {
-                  aspectRatio: 4 / 4,
-                  crop: function(e) {
-                    console.log(e.detail.x);
-                    console.log(e.detail.y);
-                    console.log(e.detail.width);
-                    console.log(e.detail.height);
-                  }
-                });
-
 
                 //holder.appendChild(preview);
             };

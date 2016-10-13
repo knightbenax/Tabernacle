@@ -20,6 +20,8 @@
     <link href="css/nprogress.css" rel="stylesheet">
     <script src="js/nprogress.js"></script>
     <script src="js/steverodgers.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+    <link rel="stylesheet" type="text/css" href="css/cs-skin-elastic.css" />
 
 
     <!--[if lte IE 8]>
@@ -113,33 +115,62 @@ would find it.
       <div class="page upload">
         <!--<div class="info_upload">Upload a picture</div>
         <a href="javascript:void(0)" onclick="callUpload()" class="flat_button_black_white_outline getstarted">Upload A Picture</a>-->
-        <input type="file" accept="image/*" id="upload_ninja" >
-        <div id="photo" onclick="callUpload()">
-          <img id="user_blob" src="https://pbs.twimg.com/media/Ct4Ub3gWgAAtzu7.jpg:large"/>
+        <input type="file" accept="image/*" id="upload_ninja" onchange="showPreview(this)">
+        <div id="caller" onclick="callUpload()">
+
         </div>
-        <div id="filterContainer">
-          <ul id="filters">
-      			<li> <a href="#" id="normal">Normal</a> </li>
-      			<li> <a href="#" id="vintage">Vintage</a> </li>
-      			<li> <a href="#" id="lomo">Lomo</a> </li>
-      			<li> <a href="#" id="clarity">Clarity</a> </li>
-      			<li> <a href="#" id="sinCity">Sin City</a> </li>
-      			<li> <a href="#" id="sunrise">Sunrise</a> </li>
-      			<li> <a href="#" id="crossProcess">Cross Process</a> </li>
-      			<li> <a href="#" id="orangePeel">Orange Peel</a> </li>
-      			<li> <a href="#" id="love">Love</a> </li>
-      			<li> <a href="#" id="grungy">Grungy</a> </li>
-      			<li> <a href="#" id="jarques">Jarques</a> </li>
-      			<li> <a href="#" id="pinhole">Pinhole</a> </li>
-      			<li> <a href="#" id="oldBoot">Old Boot</a> </li>
-      			<li> <a href="#" id="glowingSun">Glowing Sun</a> </li>
-      			<li> <a href="#" id="hazyDays">Hazy Days</a> </li>
-      			<li> <a href="#" id="herMajesty">Her Majesty</a> </li>
-      			<li> <a href="#" id="nostalgia">Nostalgia</a> </li>
-      			<li> <a href="#" id="hemingway">Hemingway</a> </li>
-      			<li> <a href="#" id="concentrate">Concentrate</a> </li>
-      		</ul>
+        <span id="user_instruction">Select what part of the picture to use</span>
+        <div id="photo">
+          <img id="user_blob"/>
         </div>
+        <span id="user_control">
+          <a href="javascript:void(0)" class="flat_button_black_white_outline continue">Continue</a>
+        </span>
+
+      </div>
+      <div class="page">
+
+        <span id="user_instruction_two">Select a filter below</span>
+
+        <div>
+          <select id="webgl-filter-stage-1" class="cs-select" style="width: 120px"></select>
+          <!--<option value="0">none</option><option value="1">negative</option><option value="2">brightness</option><option value="3">saturation</option><option value="4">contrast</option><option value="5">hue</option><option value="6">desaturate</option><option value="7">desaturateLuminance</option><option value="8">brownie</option><option value="9">sepia</option><option value="10">vintagePinhole</option><option value="11">kodachrome</option><option value="12">technicolor</option><option value="13">detectEdges</option><option value="14">sharpen</option><option value="15">emboss</option><option value="16">blur</option>-->
+        </div>
+
+          <div class="canvasholder">
+            <img class="that_guy" id="that_guy"/>
+            <canvas id="image-filter-canvas"></canvas>
+          </div>
+
+                <div id="filterContainer">
+                  <ul id="filters">
+              			<li> <a href="#" id="normal">Normal</a> </li>
+              			<li> <a href="#" id="vintage">Vintage</a> </li>
+              			<li> <a href="#" id="lomo">Lomo</a> </li>
+              			<li> <a href="#" id="clarity">Clarity</a> </li>
+              			<li> <a href="#" id="sinCity">Sin City</a> </li>
+              			<li> <a href="#" id="sunrise">Sunrise</a> </li>
+              			<li> <a href="#" id="crossProcess">Cross Process</a> </li>
+              			<li> <a href="#" id="orangePeel">Orange Peel</a> </li>
+              			<li> <a href="#" id="love">Love</a> </li>
+              			<li> <a href="#" id="grungy">Grungy</a> </li>
+              			<li> <a href="#" id="jarques">Jarques</a> </li>
+              			<li> <a href="#" id="pinhole">Pinhole</a> </li>
+              			<li> <a href="#" id="oldBoot">Old Boot</a> </li>
+              			<li> <a href="#" id="glowingSun">Glowing Sun</a> </li>
+              			<li> <a href="#" id="hazyDays">Hazy Days</a> </li>
+              			<li> <a href="#" id="herMajesty">Her Majesty</a> </li>
+              			<li> <a href="#" id="nostalgia">Nostalgia</a> </li>
+              			<li> <a href="#" id="hemingway">Hemingway</a> </li>
+              			<li> <a href="#" id="concentrate">Concentrate</a> </li>
+              		</ul>
+                </div>
+
+                <span id="user_control_two">
+                  <a href="javascript:void(0)" class="flat_button_blue_white_outline download">Download</a>
+                </span>
+
+
       </div>
     </div>
     </div>
@@ -163,9 +194,12 @@ would find it.
 
     <script src="js/classie.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/webgl-image-filter.js"></script>
 
     <script src="js/sidechick.js"></script>
-    <script src="js/ironman.js"></script>
+    <script src="js/selectFx.js"></script>
+
+    <!--<script src="js/ironman.js"></script>-->
     <script src="js/filereader.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/caman.full.js"></script>
@@ -307,20 +341,49 @@ would find it.
           // effect classname
           effect : 'anim--effect-3',
           onStart : function(direction) {
+
             // next page gets class page--animate-[direction]
-            var nextPage = pages[currentPage === 0 ? 1 : 0];
-            classie.add(nextPage, 'page--animate-' + direction);
+            //if(currentPage < 2){
+            //currentPage = getPage(currentPage);
+            //} else {
+              //currentPage = 0;
+            //}
+            //console.log("S" + currentPage);
+            //currentPage = currentPage === 0 ? 1 : 0;
+            //var nextPage = pages[currentPage === 0 ? 1 : 0];
+            //console.log("S" + (currentPage === 0 ? 1 : 0));
+            //var nextPage = pages[currentPage === 0 ? 1 : 0];
+            //var nextPage = pages[currentPage];
+            //classie.add(nextPage, 'page--animate-' + direction);
+
           },
           onEnd : function(direction) {
             // remove class page--animate-[direction] from next page
-            var nextPage = pages[currentPage === 0 ? 1 : 0];
-            nextPage.className = 'page';
+            //var nextPage = pages[currentPage === 0 ? 1 : 0];
+            //if(currentPage > 0){
+              //currentPage--;
+            //} else {
+              //currentPage = 2;
+            //}
+
+            //console.log(currentPage);
+            //currentPage = getPage(currentPage);
+            //var nextPage = pages[currentPage === 0 ? 1 : 0];
+            //console.log("E" + currentPage);
+            //currentPage = currentPage === 0 ? 1 : 0;
+            //var nextPage = pages[currentPage === 0 ? 1 : 0];
+            //console.log("E" + (currentPage === 0 ? 1 : 0));
+            //var nextPage = pages[currentPage];
+            //nextPage.className = 'page';
+
           }
         };
         revealer = new Revealer(revealerOpts);
 
       // clicking the page nav buttons
       document.querySelector('a.getstarted').addEventListener('click', function() { reveal('top'); });
+      document.querySelector('a.continue').addEventListener('click', function() { showImage(); reveal('left'); });
+      document.querySelector('a.download').addEventListener('click', function() { downloadImage(); });
       /*document.querySelector('button.pagenav__button--left').addEventListener('click', function() { reveal('left'); });
       document.querySelector('button.pagenav__button--right').addEventListener('click', function() { reveal('right'); });
       document.querySelector('button.pagenav__button--bottom').addEventListener('click', function() { reveal('bottom'); });
@@ -330,11 +393,27 @@ would find it.
       document.querySelector('button.pagenav__button--cornerbottomright').addEventListener('click', function() { reveal('cornerbottomright'); });*/
 
       // triggers the effect by calling instance.reveal(direction, callbackTime, callbackFn)
+      function getPage(currentPage) {
+        if (currentPage == 0) {
+          return 2;
+        } else if (currentPage == 2) {
+          return 1;
+        }
+
+        return 0;
+      }
+
       function reveal(direction) {
         var callbackTime = 750,
           callbackFn = function() {
             classie.remove(pages[currentPage], 'page--current');
-            currentPage = currentPage === 0 ? 1 : 0;
+
+            currentPage = getPage(currentPage);
+            //console.log("R" + currentPage);
+            currentPage = getPage(currentPage);
+            //currentPage = currentPage === 0 ? 1 : 0;
+            //currentPage = getPage(currentPage);
+            //console.log("R" + currentPage);
             classie.add(pages[currentPage], 'page--current');
           };
 
@@ -375,5 +454,127 @@ would find it.
       }
     })();
     </script>
+    <!--<script src="js/blackwidow.js"></script>-->
+    <script>
+    (function() {
+      /*[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+        new SelectFx(el);
+      } );*/
+    })();
+  </script>
+  <script>
+
+  (function(){
+
+
+
+  var presets = [
+  	{name: 'none'},
+  	{name: 'negative'},
+  	{name: 'brightness', args:[1.5]},
+  	{name: 'saturation', args:[1.5]},
+  	{name: 'contrast', args:[1.5]},
+  	{name: 'hue', args:[180]},
+  	{name: 'desaturate'},
+  	{name: 'desaturateLuminance'},
+  	{name: 'brownie'},
+  	{name: 'sepia'},
+  	{name: 'vintagePinhole'},
+  	{name: 'kodachrome'},
+  	{name: 'technicolor'},
+  	{name: 'detectEdges'},
+  	{name: 'sharpen'},
+  	{name: 'emboss'},
+  	{name: 'blur', args:[7]}
+  ];
+
+  var fillSelectBox = function( id, onchange ) {
+  	var select = document.getElementById(id);
+  	select.onchange = onchange;
+
+  	for( var i = 0; i < presets.length; i++ ) {
+  		var name = presets[i].name;
+  		var opt = document.createElement('option');
+  		opt.value = i;
+  		opt.innerHTML = name;
+  		select.appendChild(opt);
+  	}
+
+    //$("#webgl-filter-stage-1").val(0).change();
+
+    //alert("fuck");
+    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+      new SelectFx(el);
+    });
+  };
+
+  var addFilterFromSelectBox = function( filter, id ) {
+  	var index = parseInt(document.getElementById(id).value);
+  	var preset = presets[index];
+  	if( preset.name == 'none' ) { return; }
+
+  	filter.addFilter( preset.name, preset.args );
+  };
+
+  // Get the 2d context from the canvas and load an image
+  var canvas = document.getElementById('image-filter-canvas');
+  var ctx = canvas.getContext('2d');
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#000';
+  ctx.fillRect(0,0, canvas.width, canvas.height);
+  ctx.fillStyle = '#fff';
+  ctx.fillText("Loading...", canvas.width/2, canvas.height/2);
+
+  // Create the filter
+  try {
+  	var filter = new WebGLImageFilter();
+  }
+  catch( err ) {
+  	ctx.fillStyle = '#000';
+  	ctx.fillRect(0,0, canvas.width, canvas.height);
+  	ctx.fillStyle = '#fff';
+  	ctx.fillText("This browser doesn't support WebGL", canvas.width/2, canvas.height/2);
+  	return;
+  }
+
+  var img = document.getElementById("that_guy");//new Image();
+  var realImg = document.getElementById("that_guy");
+  //img.src = '/files/webgl-image-filter/sergey-brin.jpg';
+  //img.src = realImg.src;
+  img.onload = function() {
+  	canvas.width = img.width;
+  	canvas.height = img.height;
+
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+    $(realImg).hide();
+    $("#image-filter-canvas").show();
+
+  	// When a select box changes its value, run the filter again
+  	var onchange = function( ev ) {
+      //alert("balls");
+  		filter.reset();
+  		addFilterFromSelectBox(filter, 'webgl-filter-stage-1');
+  		//addFilterFromSelectBox(filter, 'webgl-filter-stage-2');
+  		//addFilterFromSelectBox(filter, 'webgl-filter-stage-3');
+
+  		var filteredImage = filter.apply(img);
+
+  		// Draw the filtered image into our 2D Canvas
+  		ctx.drawImage(filteredImage, 0, 0);
+  	};
+
+  	// Fill the Select Box and attach the onchange listener
+  	fillSelectBox('webgl-filter-stage-1', onchange);
+  	//fillSelectBox('webgl-filter-stage-2', onchange);
+  	//fillSelectBox('webgl-filter-stage-3', onchange);
+
+  	document.getElementById('webgl-filter-stage-1').selectedIndex = 0;
+  	document.getElementById('webgl-filter-stage-1').onchange();
+  };
+
+  })();
+
+  </script>
 </body>
 </html>

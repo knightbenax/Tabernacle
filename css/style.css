@@ -306,6 +306,25 @@ right:0px;
 }
 
 
+.flat_button_blue_white_outline{
+  background: #014ab9;
+  /*box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.50);*/
+  padding: 8px 30px;
+  font-family: inherit;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  display: inline-block;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+
 .demos .second .trex{
 
   background-size: cover;
@@ -345,9 +364,66 @@ right:0px;
 #photo{
 	margin:0 auto;
 	width:600px;
-	height:600px;
+	/*height:600px;*/
 	text-align:center;
 	position:relative;
+}
+
+#caller{
+  margin:0 auto;
+  width:350px;
+  /*height:600px;*/
+  text-align:center;
+  position:relative;
+}
+
+#user_instruction{
+  display: none;
+  margin:0 auto;
+  margin-bottom: 10px;
+
+  width:300px;
+  text-align:center;
+}
+
+
+#user_instruction_two{
+  display: block;
+  margin:0 auto;
+  margin-bottom: 10px;
+
+  width:300px;
+  text-align:center;
+}
+
+#user_control{
+  display: none;
+  margin:0 auto;
+  margin-top: 10px;
+
+  width:300px;
+  text-align:center;
+}
+
+#user_control_two{
+  display: block;
+  margin:0 auto;
+  margin-top: 10px;
+
+  width:300px;
+  text-align:center;
+}
+
+.canvasholder{
+  width: 400px;
+  margin: auto;
+  height: 400px;
+}
+
+.canvasholder canvas, .canvasholder img{
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: 100% !important;
 }
 
 
@@ -365,9 +441,10 @@ right:0px;
 	letter-spacing: 1px;
 }*/
 
-#photo:after{
-    content: 'Upload a photo here';
-    margin-top: 150px;
+#caller:after{
+    content: 'Click here to Upload a photo';
+    margin-bottom: 15px;
+    margin-top: 0px;
     text-transform: uppercase;
     z-index: 1;
     color: #ccc;
@@ -385,7 +462,7 @@ right:0px;
     cursor: pointer;
 }
 
-#photo canvas{
+/*#photo canvas{
 	text-align:center;
 	display:inline-block;
 	border-radius: 15px;
@@ -399,13 +476,21 @@ right:0px;
 
 #photo img{
 	opacity:0;
-}
+}*/
 
 #filterContainer{
 	width: 650px;
 	margin: 10px auto 10px;
 	position: relative;
-	display:none;
+  display:none;
+}
+
+div.cs-select{
+  margin-bottom: 10px;
+}
+
+#image-filter-canvas{
+  display: none;
 }
 
 #filterContainer:before{
@@ -431,7 +516,7 @@ right:0px;
 }
 
 #filters{
-	padding: 20px 20px 30px;
+	padding: 10px;
 	border-radius: 8px;
 	background-color: rgba(0,0,0,0.1);
 	overflow: hidden;
@@ -451,8 +536,9 @@ right:0px;
 
 #filters li a{
 	display: block;
-	width: 150px;
-	height: 130px;
+  width: 110px;
+  height: 90px;
+  background-size: cover;
 	display: inline-block;
 	position: relative;
 	background: center top no-repeat;
@@ -460,7 +546,7 @@ right:0px;
 
 	font-weight: bold;
 	color: #ccc;
-	line-height: 294px;
+	line-height: 230px;
 	text-align: center;
 	box-shadow: 0 0 1px rgba(255,255,255,0.4) inset;
 	border-radius: 4px;
@@ -476,8 +562,8 @@ right:0px;
 	position: absolute;
 	width: 49px;
 	height: 45px;
-	top: 43px;
-	left: 51px;
+	top: 23px;
+	left: 30px;
 	background: url('../img/star.jpg') no-repeat;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.5);
 }
