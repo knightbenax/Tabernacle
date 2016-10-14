@@ -9,6 +9,23 @@
     <meta name="author" content="Ashefor Bezaleel" />
     <meta name="keywords" content="young-disciples-international, ashefor, bez, ydi, camp-joseph, 2016" />
     <meta name="viewport" content="width=device-width">
+
+    <meta property="og:url"           content="http://campjoseph.ydiworld.org/" />
+	  <meta property="og:type"          content="website" />
+	  <meta property="og:title"         content="Camp Joseph 2016 Avatar App" />
+	  <meta property="og:description"   content="Get your own Camp Joseph 2016 Display Picture" />
+	  <meta property="og:image"         content="http://campjoseph.ydiworld.org/img/social_media-min.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@officialydi">
+    <meta name="twitter:creator" content="@officialydi">
+    <meta name="twitter:title" id="title" content="Camp Joseph 2016 Avatar App">
+    <meta name="twitter:description" id="desc" content="Get your own Camp Joseph 2016 Display Picture">
+    <meta name="twitter:text:title" id="title" content="Camp Joseph 2016 Avatar App">
+    <meta name="twitter:text:description" id="desc" content="Get your own Camp Joseph 2016 Display Picture">
+    <meta name="twitter:image" id="image" content="http://campjoseph.ydiworld.org/img/social_media-min.jpg">
+
+
     <link rel="shortcut icon" href="../icon.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -47,6 +64,15 @@
     <![endif]-->
 </head>
 <body>
+
+  <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- Bez top bar -->
     <div class="top-banner">
@@ -118,7 +144,7 @@ would find it.
             </div>
 
             <div class="buttons">
-              <a href="javascript:void(0)" class="flat_button_black_white_outline getstarted">Get Started</a>&nbsp;&nbsp;&nbsp;<a href="" class="flat_button_green_white_outline">Tell Others</a>
+              <a href="javascript:void(0)" class="flat_button_black_white_outline getstarted">Get Started</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" class="flat_button_green_white_outline tellothers">Tell Others</a>
             </div>
 
           </div>
@@ -212,11 +238,30 @@ would find it.
     <script src="js/sidechick.js"></script>
     <script src="js/selectFx.js"></script>
 
-    <!--<script src="js/ironman.js"></script>-->
+    <script src="js/blackwidow.js"></script>
     <script src="js/FileSaver.min.js"></script>
     <script src="js/canvas-toBlob.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/caman.full.js"></script>
+
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+    </script>
+
     <script>
         $(function() {
 
@@ -230,7 +275,10 @@ would find it.
                 $(function() {
                       var BV = new $.BigVideo();
           			BV.init();
-          			BV.show('vid/bird.mp4',{doLoop:true});
+          			BV.show([
+                  { type: "video/mp4",  src: "vid/bird.mp4" },
+                  { type: "video/webm", src: "vid/bird.webm" },
+                  { type: "video/ogg",  src: "vid/bird.ogv" }], {doLoop:true});
           	    });
                 /*BV = new $.BigVideo({forceAutoplay:isTouch});
                 BV.init();
@@ -399,6 +447,7 @@ would find it.
       document.querySelector('a.continue').addEventListener('click', function() { showImage(); reveal('left'); });
       document.querySelector('a.download').addEventListener('click', function() { downloadImage(); });
       document.querySelector('a.startover').addEventListener('click', function() { reveal('bottom'); });
+      document.querySelector('a.tellothers').addEventListener('click', function() { showSocial(); });
       /*document.querySelector('button.pagenav__button--left').addEventListener('click', function() { reveal('left'); });
       document.querySelector('button.pagenav__button--right').addEventListener('click', function() { reveal('right'); });
       document.querySelector('button.pagenav__button--bottom').addEventListener('click', function() { reveal('bottom'); });
@@ -481,7 +530,7 @@ would find it.
 
   (function(){
 
-
+  var before = false;
 
   var presets = [
   	{name: 'none'},
@@ -517,10 +566,13 @@ would find it.
 
     //$("#webgl-filter-stage-1").val(0).change();
 
-    //alert("fuck");
-    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
-      new SelectFx(el);
-    });
+    if(!before){
+      //alert("fuck");
+      [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+        new SelectFx(el);
+      });
+      before = true;
+    }
   };
 
   var addFilterFromSelectBox = function( filter, id ) {

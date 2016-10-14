@@ -31,11 +31,18 @@ function showImage(){
 
 function downloadImage(){
 
+  $("#user_blob").css("display", "none");
+  $("#user_blob").css("opacity", "0");
+  $("#user_instruction").css("display", "none");
+  $("#user_control").css("display", "none");
+
+  cropper.destroy();
+
   var canvas = document.getElementById('image-filter-canvas');
   var ctx = canvas.getContext('2d');
 
   var img = new Image();
-  img.src = "img/z.png";
+  img.src = "img/g.png";
   img.onload = function() {
 
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
