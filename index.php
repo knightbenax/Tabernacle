@@ -10,6 +10,8 @@
     <meta name="keywords" content="young-disciples-international, ashefor, bez, ydi, camp-joseph, 2016" />
     <meta name="viewport" content="width=device-width">
 
+    <meta property="fb:app_id"           content="874278422590799" />
+
     <meta property="og:url"           content="http://campjoseph.herokuapp.com/" />
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="Camp Joseph 2016 Avatar App" />
