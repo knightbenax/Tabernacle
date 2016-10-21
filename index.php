@@ -10,11 +10,11 @@
     <meta name="keywords" content="young-disciples-international, ashefor, bez, ydi, camp-joseph, 2016" />
     <meta name="viewport" content="width=device-width">
 
-    <meta property="og:url"           content="http://campjoseph.herokuapp.org/" />
+    <meta property="og:url"           content="http://campjoseph.herokuapp.com/" />
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="Camp Joseph 2016 Avatar App" />
 	  <meta property="og:description"   content="Get your own Camp Joseph 2016 Display Picture" />
-	  <meta property="og:image"         content="http://campjoseph.herokuapp.org/img/social_media-min.jpg" />
+	  <meta property="og:image"         content="http://campjoseph.herokuapp.com/img/social_media-min.jpg" />
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@officialydi">
@@ -23,7 +23,7 @@
     <meta name="twitter:description" id="desc" content="Get your own Camp Joseph 2016 Display Picture">
     <meta name="twitter:text:title" id="title" content="Camp Joseph 2016 Avatar App">
     <meta name="twitter:text:description" id="desc" content="Get your own Camp Joseph 2016 Display Picture">
-    <meta name="twitter:image" id="image" content="http://campjoseph.herokuapp.org/img/social_media-min.jpg">
+    <meta name="twitter:image" id="image" content="http://campjoseph.herokuapp.com/img/social_media-min.jpg">
 
 
     <link rel="shortcut icon" href="../icon.ico">
