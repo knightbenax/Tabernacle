@@ -33,7 +33,8 @@
     <!--<link rel="stylesheet" href="css/style.css">-->
 
     <link media="screen and (min-width: 769px)" href="css/style.css" rel="stylesheet" type="text/css" />
-    <link media="screen and (max-width: 768px)" href="css/mobile_style.css" rel="stylesheet" type="text/css" />
+    <link media="screen and (max-width: 768px) and (min-width: 374px)" href="css/mobile_style.css" rel="stylesheet" type="text/css" />
+    <link media="screen and (max-width: 375px)" href="css/tiny_mobile_style.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bigvideo.css">

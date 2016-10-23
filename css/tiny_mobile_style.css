@@ -152,7 +152,7 @@ justify-content: center;
 }
 
 .content .functions{
-padding: 30px 30px;
+padding: 20px 15px 30px;
 margin-top: 30px;
   overflow: hidden;
 }
@@ -199,8 +199,8 @@ margin-top: 30px;
 }
 
 .demos .second .uno, .demos .second .deux, .demos .second .trex, .demos .second .four{
-  width: 140px;
-    height: 140px;
+  width: 115px;
+    height: 115px;
     display: flex;
 }
 
@@ -264,7 +264,7 @@ right:0px;
 .flat_button_green_white_outline{
   background: #417505;
   /*box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.50);*/
-  padding: 8px 30px;
+  padding: 8px 20px;
   font-family: inherit;
   font-size: 14px;
   text-decoration: none;
@@ -282,7 +282,7 @@ right:0px;
 .flat_button_black_white_outline{
   background: #000;
   /*box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.50);*/
-  padding: 8px 30px;
+  padding: 8px 20px;
   font-family: inherit;
   font-size: 14px;
   text-decoration: none;
@@ -301,7 +301,7 @@ right:0px;
 .flat_button_blue_white_outline{
   background: #014ab9;
   /*box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.50);*/
-  padding: 8px 30px;
+  padding: 8px 20px;
   font-family: inherit;
   font-size: 14px;
   text-decoration: none;
