@@ -8,7 +8,8 @@
     <meta name="description" content="Camp Joseph 2016 Avatar App" />
     <meta name="author" content="Ashefor Bezaleel" />
     <meta name="keywords" content="young-disciples-international, ashefor, bez, ydi, camp-joseph, 2016" />
-    <meta name="viewport" content="width=device-width">
+    <!--<meta name="viewport" content="width=device-width">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
     <meta property="fb:app_id"           content="874278422590799" />
 

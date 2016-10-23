@@ -130,7 +130,7 @@ p a {
     z-index: 999;
     color: #fff;
     background: rgba(6,97,0,0.35);
-    padding: 60px;
+    padding: 80px 10px 0px 10px;
     text-align: center;
     display: flex;
 flex-direction: column;
