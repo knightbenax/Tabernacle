@@ -31,6 +31,8 @@ function showImage(){
 
 function downloadImage(){
 
+  NProgress.start();
+
   $("#user_blob").css("display", "none");
   $("#user_blob").css("opacity", "0");
   $("#user_instruction").css("display", "none");
@@ -57,8 +59,9 @@ function downloadImage(){
     var link = document.getElementById("downloadJigga");
     link.href = dt;
 
-    canvas.toBlob(function(blob) {
+    canvas.toBlobHD(function(blob) {
             saveAs(blob, "CJ_Display_picture.png");
+            NProgress.done();
     }, "image/png");
 
     //window.location.href = dt;

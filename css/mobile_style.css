@@ -199,8 +199,8 @@ margin-top: 30px;
 }
 
 .demos .second .uno, .demos .second .deux, .demos .second .trex, .demos .second .four{
-  width: 140px;
-    height: 140px;
+  width: 130px;
+    height: 130px;
     display: flex;
 }
 
@@ -360,7 +360,7 @@ right:0px;
 
 #photo{
 	margin:0 auto;
-	width:600px;
+	width:100%;
 	/*height:600px;*/
 	text-align:center;
 	position:relative;
@@ -368,7 +368,7 @@ right:0px;
 
 #caller{
   margin:0 auto;
-  width:350px;
+  width:100%;
   /*height:600px;*/
   text-align:center;
   position:relative;
@@ -412,9 +412,9 @@ right:0px;
 }
 
 .canvasholder{
-  width: 450px;
+  width: 100%;
   margin: auto;
-  height: 450px;
+  height: auto;
 }
 
 .canvasholder canvas, .canvasholder img{
@@ -446,12 +446,12 @@ right:0px;
     z-index: 1;
     color: #ccc;
     display: inline-block;
-    font-size: 20px;
+    font-size: 15px;
     /* position: absolute; */
     text-align: center;
     /* width: 100%; */
     letter-spacing: 1px;
-    padding: 5px 25px;
+    padding: 5px 15px;
     border: 1px solid;
     border-radius: 3px;
     -moz-border-radius: 3px;
