@@ -28,8 +28,12 @@
     <meta name="twitter:image" id="image" content="http://campjoseph.herokuapp.com/img/social_media-min.jpg">
 
 
-    <link rel="shortcut icon" href="../icon.ico">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="icon.ico">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+
+    <link media="screen and (min-width: 769px)" href="css/style.css" rel="stylesheet" type="text/css" />
+    <link media="screen and (max-width: 768px)" href="css/mobile_style.css" rel="stylesheet" type="text/css" />
+
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bigvideo.css">
     <link rel="stylesheet" href="css/component.css">
