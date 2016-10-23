@@ -38,7 +38,7 @@
   display: block;
   position: fixed;
   z-index: 100;
-  bottom: 70px;
+  bottom: 15px;
   left: 15px;
 }
 
@@ -46,7 +46,7 @@
   width: 24px;
   height: 24px;
 
-  border:  solid 4px transparent;
+  border:  solid 8px transparent;
   border-top-color:  #fff;
   border-left-color: #fff;
   border-radius: 10px;
@@ -78,4 +78,3 @@
   0%   { transform: rotate(0deg);   transform: rotate(0deg); }
   100% { transform: rotate(360deg); transform: rotate(360deg); }
 }
-
