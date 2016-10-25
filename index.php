@@ -44,6 +44,7 @@
     <script src="js/cropper.min.js"></script>
     <link href="css/nprogress.css" rel="stylesheet">
     <script src="js/nprogress.js"></script>
+
     <script src="js/steverodgers.js"></script>
     <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
     <link rel="stylesheet" type="text/css" href="css/cs-skin-elastic.css" />
@@ -251,6 +252,7 @@ would find it.
     <script src="js/canvas-toBlob.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/caman.full.js"></script>
+    <script src="js/jquery.fileDownload.js"></script>
 
     <script>window.twttr = (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0],
@@ -536,6 +538,53 @@ would find it.
   </script>
   <script>
 
+  var before = false;
+
+  (function(){
+
+    var presets = [
+    	{name: 'none'},
+    	{name: 'aqua'},
+    	{name: 'bubbles'},
+    	{name: 'colorise'},
+    	{name: 'cool'},
+    	{name: 'fuzzy'},
+    	{name: 'gray'},
+    	{name: 'light'},
+    	{name: 'old'},
+    	{name: 'real old'},
+    	{name: 'really old'},
+    	{name: 'sepia'}
+    ];
+
+    var fillSelectBox = function( id, onchange ) {
+    	var select = document.getElementById(id);
+    	select.onchange = onchange;
+
+    	for( var i = 0; i < presets.length; i++ ) {
+    		var name = presets[i].name;
+    		var opt = document.createElement('option');
+    		opt.value = i;
+    		opt.innerHTML = name;
+    		select.appendChild(opt);
+    	}
+
+      //$("#webgl-filter-stage-1").val(0).change();
+
+      if(!before){
+        //alert("fuck");
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+          new SelectFx(el);
+        });
+        before = true;
+      }
+    };
+
+  })();
+
+  </script>
+  <!--<script>
+
   (function(){
 
   var before = false;
@@ -650,6 +699,6 @@ would find it.
 
   })();
 
-  </script>
+</script>-->
 </body>
 </html>

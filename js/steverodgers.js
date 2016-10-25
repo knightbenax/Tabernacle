@@ -1,3 +1,7 @@
+var universal_filename;
+var final_filename;
+var last_final_filename;
+
 function showImage(){
   var result = cropper.getCroppedCanvas();
 
@@ -7,7 +11,24 @@ function showImage(){
 
   //$(".canvasholder canvas").attr("data-caman-hidpi", dataURL);
 
-  $(".that_guy").attr("src", dataURL);
+  //$(".that_guy").attr("src", dataURL);
+  NProgress.start();
+
+  $.ajax({
+    type: 'POST',
+    url: 'posters/workings.php',
+    data: {
+      pngimageData: dataURL,
+      filename: 'test.png'
+    },
+  success: function(output) {
+    universal_filename = output;
+    final_filename = universal_filename; //for cases where the user never selected a filter then clicked download
+    $(".that_guy").attr("src", "posters/" + output);
+    setSelect();
+    NProgress.done();
+  }
+  })
 
   /*var pages = [].slice.call(document.querySelectorAll('.canvasholder > .that_guy'));
 
@@ -29,8 +50,105 @@ function showImage(){
 
 }
 
-function downloadImage(){
+var presets = [
+  {name: 'none'},
+  {name: 'aqua'},
+  {name: 'bubbles'},
+  {name: 'colorise'},
+  {name: 'cool'},
+  {name: 'fuzzy'},
+  {name: 'gray'},
+  {name: 'light'},
+  {name: 'old'},
+  {name: 'real old'},
+  {name: 'really old'},
+  {name: 'sepia'}
+];
 
+function setSelect(){
+
+  var fillSelectBox = function( id, onchange ) {
+    var select = document.getElementById(id);
+    select.onchange = onchange;
+
+    for( var i = 0; i < presets.length; i++ ) {
+      var name = presets[i].name;
+      var opt = document.createElement('option');
+      opt.value = i;
+      opt.innerHTML = name;
+      select.appendChild(opt);
+    }
+    //$("#webgl-filter-stage-1").val(0).change();
+
+    if(!before){
+      //alert("fuck");
+      [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+        new SelectFx(el);
+      });
+      before = true;
+    }
+  };
+
+  fillSelectBox('webgl-filter-stage-1', changeImage);
+}
+
+function changeImage(ev){
+    NProgress.start();
+    //alert("balls");
+    var id = "webgl-filter-stage-1";
+    var index = parseInt(document.getElementById(id).value);
+  	var preset = presets[index];
+  	if( preset.name == 'none' ) { final_filename = universal_filename; return; }
+
+    $.ajax({
+      type: 'POST',
+      url: 'posters/workings.php',
+      data: {
+        filter: preset.name,
+        filename: universal_filename
+      },
+    success: function(output) {
+      final_filename = output;
+      $(".that_guy").attr("src", "posters/" + output);
+      //setSelect();
+      NProgress.done();
+    }
+    })
+}
+
+function downloadImage(){
+  NProgress.start();
+
+  $.ajax({
+    type: 'POST',
+    url: 'posters/workings.php',
+    data: {
+      download: 'yes',
+      filename: final_filename
+    },
+  success: function(output) {
+    last_final_filename = output;
+    $(".that_guy").attr("src", "posters/" + output);
+    //setSelect();
+    NProgress.done();
+    //NProgress.start();
+    $.fileDownload('posters/workings.php?download_x&filename=' + output,  {
+    successCallback: function (url) {
+        alert('You just got a file download dialog or ribbon for this URL :' + url);
+    }})
+        .done(function () {
+          NProgress.done();
+          //window.alert("Balls");
+        })
+        .fail(function () {
+          NProgress.done();
+          //window.alert("Balls");
+        });
+  }
+  })
+}
+
+function downloadImageOld(){
   NProgress.start();
 
   $("#user_blob").css("display", "none");
@@ -61,7 +179,7 @@ function downloadImage(){
 
     canvas.toBlobHD(function(blob) {
             saveAs(blob, "CJ_Display_picture.png");
-            NProgress.done();
+            //NProgress.done();
     }, "image/png");
 
     //window.location.href = dt;
