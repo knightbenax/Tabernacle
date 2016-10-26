@@ -168,7 +168,7 @@ would find it.
         </div>
         <span id="user_instruction">Select what part of the picture to use</span>
         <div id="photo">
-          <img id="user_blob" src="img/loading.png"/>
+          <img id="user_blob"/>
         </div>
         <span id="user_control">
           <a href="javascript:void(0)" class="flat_button_black_white_outline continue">Continue</a>
@@ -185,7 +185,7 @@ would find it.
         </div>
 
           <div class="canvasholder">
-            <img class="that_guy" id="that_guy"/>
+            <img class="that_guy" id="that_guy" src="img/loading.png"/>
             <canvas id="image-filter-canvas"></canvas>
           </div>
 
