@@ -168,7 +168,7 @@ would find it.
         </div>
         <span id="user_instruction">Select what part of the picture to use</span>
         <div id="photo">
-          <img id="user_blob"/>
+          <img id="user_blob" src="img/loading.png"/>
         </div>
         <span id="user_control">
           <a href="javascript:void(0)" class="flat_button_black_white_outline continue">Continue</a>
