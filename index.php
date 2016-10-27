@@ -18,6 +18,8 @@
 	  <meta property="og:title"         content="Camp Joseph 2016 Avatar App" />
 	  <meta property="og:description"   content="Get your own Camp Joseph 2016 Display Picture" />
 	  <meta property="og:image"         content="http://campjoseph.ydiworld.org/img/social_media-min.jpg" />
+    <meta property="og:image:height"  content="1014" />
+    <meta property="og:image:width"  content="1506" />
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@officialydi">
@@ -185,7 +187,7 @@ would find it.
         </div>
 
           <div class="canvasholder">
-            <img class="that_guy" id="that_guy"/>
+            <img class="that_guy" id="that_guy" src="img/loading.png"/>
             <canvas id="image-filter-canvas"></canvas>
           </div>
 
