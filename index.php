@@ -13,11 +13,11 @@
 
     <meta property="fb:app_id"           content="874278422590799" />
 
-    <meta property="og:url"           content="http://campjoseph.herokuapp.com/" />
+    <meta property="og:url"           content="http://campjoseph.ydiworld.org/" />
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="Camp Joseph 2016 Avatar App" />
 	  <meta property="og:description"   content="Get your own Camp Joseph 2016 Display Picture" />
-	  <meta property="og:image"         content="http://campjoseph.herokuapp.com/img/social_media-min.jpg" />
+	  <meta property="og:image"         content="http://campjoseph.ydiworld.org/img/social_media-min.jpg" />
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@officialydi">
@@ -26,7 +26,7 @@
     <meta name="twitter:description" id="desc" content="Get your own Camp Joseph 2016 Display Picture">
     <meta name="twitter:text:title" id="title" content="Camp Joseph 2016 Avatar App">
     <meta name="twitter:text:description" id="desc" content="Get your own Camp Joseph 2016 Display Picture">
-    <meta name="twitter:image" id="image" content="http://campjoseph.herokuapp.com/img/social_media-min.jpg">
+    <meta name="twitter:image" id="image" content="http://campjoseph.ydiworld.org/img/social_media-min.jpg">
 
 
     <link rel="shortcut icon" href="icon.ico">
@@ -168,7 +168,7 @@ would find it.
         </div>
         <span id="user_instruction">Select what part of the picture to use</span>
         <div id="photo">
-          <img id="user_blob"/>
+          <img id="user_blob" src="img/loading.png"/>
         </div>
         <span id="user_control">
           <a href="javascript:void(0)" class="flat_button_black_white_outline continue">Continue</a>
@@ -185,7 +185,7 @@ would find it.
         </div>
 
           <div class="canvasholder">
-            <img class="that_guy" id="that_guy" src="img/loading.png"/>
+            <img class="that_guy" id="that_guy"/>
             <canvas id="image-filter-canvas"></canvas>
           </div>
 
