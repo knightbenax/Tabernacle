@@ -115,7 +115,7 @@
         <div class="details">
           <div>Venue: <span class="yellow">Faith Academy, Ota</span></div>
           <div>Date: <span class="yellow">Dec 27th - 30th</span></div>
-          <div>Theme: <span class="yellow">Excellence</span></div>
+          <div>Theme: <span class="yellow">Grace For Excellence</span></div>
         </div>
 
         <div class="functions">
