@@ -102,7 +102,7 @@ $result = $mgClient->sendMessage($domain, array(
 )
 }*/
 
-function sendMail($email){
+/*function sendMail($email){
 
   $url = "https://api.mailgun.net/v3/cj2016.ydiworld.org/messages"
 
@@ -129,7 +129,7 @@ curl_setopt($ch, CURLOPT_USERPWD, "api" . ":" . "key-835d4f7e684e51f130c623f1562
 $response = curl_exec($rest);
 echo $response;
 
-}
+}*/
 
 
 
