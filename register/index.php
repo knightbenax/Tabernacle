@@ -183,22 +183,22 @@
           <span class="title">Register For Camp Joseph 2016</span>
 
           <span class="label_">Full Name</span>
-          <input type="text" value="" placeholder="Your firstname + surname" ng-model="project_name"/>
+          <input type="text" value="" placeholder="Your firstname + surname" id="project_name"/>
 
           <span class="label_">Phone Number</span>
-          <textarea rows="1" cols="50" placeholder="MTN, Airtel, Glo, Thuraya, it doesn't matter. As long as it works" ng-model="project_desc"></textarea>
+          <textarea rows="1" cols="50" placeholder="MTN, Airtel, Glo, Thuraya, it doesn't matter. As long as it works" id="project_desc"></textarea>
 
           <span class="label_">Email Address</span>
-          <input type="text" value="" placeholder="Where we are sending your IV. No spam, we promise" ng-model="project_client_name"/>
+          <input type="text" value="" placeholder="Where we are sending your IV. No spam, we promise" id="project_client_name"/>
 
           <span class="label_">How did you hear about Camp Joseph?</span>
-          <input type="text" value="" placeholder="Tell us. We love a good gist" ng-model="project_fee"/>
+          <input type="text" value="" placeholder="Tell us. We love a good gist" id="project_fee"/>
 
           <span class="label_">Career</span>
-          <input type="text" value="" placeholder="Student? Graduate? Engineer? Creative? Or just all round awesome being? Say it" ng-model="project_ini_payment"/>
+          <input type="text" value="" placeholder="Student? Graduate? Engineer? Creative? Or just all round awesome being? Say it" id="project_ini_payment"/>
 
           <span class="label_">Your first time at Camp Joseph?</span>
-          <input type="text" value="" placeholder="Always a first time for everything" ng-model="project_balance_payment"/>
+          <input type="text" value="" placeholder="Always a first time for everything" id="project_balance_payment"/>
 
           <!--<span class="label_">Project Team Members</span>
           <input type="text" id="project_people" size="63" data-role="tagsinput" placeholder="Who are the people on this project? Enter names and press Enter"/>-->
@@ -232,9 +232,10 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="scripts/script.js"></script>
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="scripts/script.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

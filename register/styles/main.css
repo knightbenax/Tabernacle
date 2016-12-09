@@ -479,6 +479,35 @@ box-shadow: 0px 1.6px 15px 0px rgba(0,0,0,0.50);
 
   }
 }
+
+@media (max-width: 500px) {
+  .svg {
+    display:none;
+  }
+
+  .content {
+    float:none;
+    width: 100%;
+    padding: 30px 8px 20px;
+    margin-top: 110px;
+  }
+
+  .footer{
+    display: none;
+  }
+
+  .label_, .title{
+    color: #fff;
+  }
+
+  input[type=text]{
+    color:#fff;
+  }
+
+  textarea{
+    color:#fff;
+  }
+}
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -576,5 +605,5 @@ box-shadow: 0px 1.6px 15px 0px rgba(0,0,0,0.50);
 .success img{
   width: 220px;
   display: block;
-  margin: 15px;
+  margin-bottom: 15px;
 }

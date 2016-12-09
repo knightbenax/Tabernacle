@@ -1,6 +1,6 @@
 function submit(){
   var result = validate();
-  name();
+  //name();
 
   if (result == true){
 
@@ -8,7 +8,7 @@ function submit(){
     $(".new_state").hide();
     $(".loader").show();
 
-    $.post( "ajax.php", function( data ) {
+    $.post( "ajax.php", {text0: $("#project_name").val(), text1: $("#project_desc").val(), text2: $("#project_client_name").val(), text3: $("#project_fee").val(), text4: $("#project_ini_payment").val(), text5: $("#project_balance_payment").val()}, function( data ) {
       //$(".result" ).html( data );
       $(".loader").hide();
       $(".success").show();
