@@ -4,11 +4,10 @@ function submit(){
 
   if (result == true){
 
-
     $(".new_state").hide();
     $(".loader").show();
 
-    $.post( "ajax.php", {Code: "1", text0: $("#project_name").val(), text1: $("#project_desc").val(), text2: $("#project_client_name").val(), text3: $("#project_fee").val(), text4: $("#project_ini_payment").val(), text5: $("#project_balance_payment").val()}, function( data ) {
+    $.post( "ajax.php", {Code: "1", text0: $("#project_name").val(), text1: $("#gender").val(), text2: $("#project_desc").val(), text3: $("#project_client_name").val(), text4: $("#project_fee").val(), text5: $("#project_ini_payment").val(), text6: $("#project_balance_payment").val()}, function( data ) {
       //$(".result" ).html( data );
       $(".loader").hide();
       $(".success").show();

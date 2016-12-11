@@ -52,8 +52,9 @@ function register(){
   $text3 = $_POST["text3"];
   $text4 = $_POST["text4"];
   $text5 = $_POST["text5"];
+  $text6 = $_POST["text6"];
 
-  $sql = "INSERT INTO `cj2016_participants`(`Fullname`, `Phone`, `Email`, `Hear about Camp`, `Career`, `First time at Camp`, `Date Registered`, `Tribe`) VALUES (:fullname, :phone, :email, :hearaboutcamp, :career, :firsttime, CURRENT_TIMESTAMP, :tribe)";
+  $sql = "INSERT INTO `cj2016_participants`(`Fullname`, `Phone`, `Email`, `Hear about Camp`, `Career`, `First time at Camp`, `Date Registered`, `Tribe`, `Gender`) VALUES (:fullname, :phone, :email, :hearaboutcamp, :career, :firsttime, CURRENT_TIMESTAMP, :tribe, :gender)";
   //$sql = "INSERT INTO `bibleschool` (`ID`, `Name`, `Date Of Birth`, `Address`, `Email`, `GSM Phone Number`, `Home Phone Number`, `Gender`, `Marital Status`, `How Long Married`, `Number Of Children`, `Born Again`, `Salvation Experience`, `Church Name`, `Church Address`, `Period Attending Church`, `Church Worker`, `Unit/Department`, `Cordial Relationship With Pastor`, `Senior Pastor`, `Call Of God On Your LIfe`, `Type Of Call`, `School/College`, `Educational Qualifications`, `Programme Type Applied For`, `How Did You Hear About GHBS`, `Decision To Apply To GHBS`, `Health Challenges`, `Physical Challenges`, `Expectations`, `Passport`) VALUES (:text0, :text1, :text2, :text3, :text4, :text5, :text6, :text7, :text8, :text9, :text10, :text11, :text12, :text13, :text14, :text15, :text16, :text17, :text18, :text19, :text20, :text21, :text22, :text23, :text24, :text25, :text26, :text27, :text28, :text29)";
   try{
 
@@ -62,14 +63,34 @@ function register(){
       $db = getConnection();
       $stmt = $db->prepare($sql);
       $stmt->bindParam(":fullname", $text0);
-      $stmt->bindParam(":phone", $text1);
-      $stmt->bindParam(":email", $text2);
-      $stmt->bindParam(":hearaboutcamp", $text3);
-      $stmt->bindParam(":career", $text4);
-      $stmt->bindParam(":firsttime", $text5);
+      $stmt->bindParam(":gender", $text1);
+      $stmt->bindParam(":phone", $text2);
+      $stmt->bindParam(":email", $text3);
+      $stmt->bindParam(":hearaboutcamp", $text4);
+      $stmt->bindParam(":career", $text5);
+      $stmt->bindParam(":firsttime", $text6);
       $stmt->bindParam(":tribe", $this_tribe);
 
       $stmt->execute();
+
+      $text0_ = urlencode($text0);
+      $text2_ = urlencode($text2);
+
+      $ch = curl_init();
+      // set URL and other appropriate options
+      $url = "http://campjoseph.ydiworld.org/invite_helper.php?text0=" . $text0_ . "&text2=" . $text2_ . "&this_tribe=" . $this_tribe . "&text3=" . $text3;
+
+      curl_setopt($ch, CURLOPT_URL, $url);
+      curl_setopt($ch, CURLOPT_HEADER, 0);
+
+      // grab URL and pass it to the browser
+      $output = curl_exec($ch);
+      $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+      // close cURL resource, and free up system resources
+      curl_close($ch);
+      //echo $url;
+      return $output;
 
       //sendMail($text2);
       //echo json_encode($users);

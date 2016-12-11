@@ -211,6 +211,9 @@
           <span class="label_">Full Name</span>
           <input type="text" value="" placeholder="Your firstname + surname" id="project_name"/>
 
+          <span class="label_">Gender</span>
+          <input type="text" value="" placeholder="Male Or Female. Obviously" id="gender"/>
+
           <span class="label_">Phone Number</span>
           <textarea rows="1" cols="50" placeholder="MTN, Airtel, Glo, Thuraya, it doesn't matter. As long as it works" id="project_desc"></textarea>
 
