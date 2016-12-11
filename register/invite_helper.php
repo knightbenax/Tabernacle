@@ -10,7 +10,7 @@ echo "guy";
 
 
 
-function sendMail($email){
+/*function sendMail($email){
 
   $url = "https://api.mailgun.net/v3/campjoseph.ydiworld.org/messages"
 
@@ -32,16 +32,16 @@ curl_setopt($rest,CURLOPT_POSTFIELDS,$push_payload);
 curl_setopt($ch, CURLOPT_USERPWD, "api" . ":" . "key-835d4f7e684e51f130c623f1562e197d");
 /*curl_setopt($rest,CURLOPT_HTTPHEADER,
         array("api:key=" . $restKey,
-                "Content-Type: application/json"));*/
+                "Content-Type: application/json"));
 
 $response = curl_exec($rest);
 echo $response;
 
-}
+}*/
 
-sendMail("knightbenax@gmail.com");
 
-/*
+
+
 function sendMail($email){
 $html  = file_get_contents('my_template.html');
 
@@ -61,7 +61,9 @@ $result = $mgClient->sendMessage($domain, array(
 );, array(
     'attachment' => array('/path/to/file.txt', '/path/to/file.txt')
 )
-}*/
+}
+
+sendMail("knightbenax@gmail.com");
 
 
 ?>
