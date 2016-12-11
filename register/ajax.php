@@ -71,7 +71,7 @@ function register(){
 
       $stmt->execute();
 
-      sendMail($text2);
+      //sendMail($text2);
       //echo json_encode($users);
       //$resp = array('status' => "success");
       //$resp = array('status' => "success", 'Version' => "1.0");

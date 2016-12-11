@@ -13,11 +13,11 @@
 
     <meta property="fb:app_id"           content="874278422590799" />
 
-    <meta property="og:url"           content="http://campjoseph.ydiworld.org/" />
+    <meta property="og:url"           content="http://campjoseph.ydiworld.org/avatar" />
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="Camp Joseph 2016 Avatar App" />
 	  <meta property="og:description"   content="Get your own Camp Joseph 2016 Display Picture" />
-	  <meta property="og:image"         content="http://campjoseph.ydiworld.org/img/social_media-min.jpg" />
+	  <meta property="og:image"         content="http://campjoseph.ydiworld.org/avatar/img/social_media-min.jpg" />
     <meta property="og:image:height"  content="1014" />
     <meta property="og:image:width"  content="1506" />
 
@@ -28,7 +28,7 @@
     <meta name="twitter:description" id="desc" content="Get your own Camp Joseph 2016 Display Picture">
     <meta name="twitter:text:title" id="title" content="Camp Joseph 2016 Avatar App">
     <meta name="twitter:text:description" id="desc" content="Get your own Camp Joseph 2016 Display Picture">
-    <meta name="twitter:image" id="image" content="http://campjoseph.ydiworld.org/img/social_media-min.jpg">
+    <meta name="twitter:image" id="image" content="http://campjoseph.ydiworld.org/avatar/img/social_media-min.jpg">
 
 
     <link rel="shortcut icon" href="icon.ico">

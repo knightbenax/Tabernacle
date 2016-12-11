@@ -480,7 +480,23 @@ box-shadow: 0px 1.6px 15px 0px rgba(0,0,0,0.50);
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) and (max-width: 767px){
+  .svg{
+    width: 45%;
+    display: inline-block;
+    height: 100%;
+    position: fixed;
+  }
+
+  .content{
+    width: 55%;
+    float: right;
+    min-height: 100vh;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
   .svg {
     display:none;
   }
