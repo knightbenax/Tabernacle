@@ -93,7 +93,7 @@ $domain = "campjoseph.ydiworld.org";
 
 # Make the call to the client.
 $result = $mgClient->sendMessage($domain, array(
-    'from'    => 'YDi Invitaion Patrol Team <malak@campjoseph.ydiworld.org>',
+    'from'    => 'YDi Invitation Patrol Team <malak@campjoseph.ydiworld.org>',
     'to'      => $text3,
     //'cc'      => 'baz@example.com',
     //'bcc'     => 'bar@example.com',
