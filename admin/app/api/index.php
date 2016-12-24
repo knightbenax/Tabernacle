@@ -21,7 +21,11 @@ try {
 
     // Run application
     $app = new \Api\Application();
+    $app->get('/signups', 'getUsers');
     $app->run();
+
+
+
 
 } catch (\Exception $e) {
     if (isset($app)) {
@@ -34,5 +38,43 @@ try {
             'statusText' => 'Internal Server Error',
             'description' => $e->getMessage(),
         ));
+    }
+}
+
+/*function getConnection()
+{
+    $dbhost="XpertProCombined";
+    //$dbport="8889";
+    $dbuser="ydiworld";
+    $dbpass="pM6CJdX!SsBvjzc";
+    $dbname="ydiworld";
+    $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    return $dbh;
+}*/
+
+function getConnection()
+{
+    $dbhost="127.0.0.1";
+    //$dbport="8889";
+    $dbuser="root";
+    $dbpass="";
+    $dbname="ydiworld";
+    $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    return $dbh;
+}
+
+
+function getUsers(){
+    $sql = "SELECT * FROM Events WHERE Featured = 'Yes' ORDER BY ID DESC";
+    try{
+        $db = getConnection();
+        $stmt = $db->query($sql);
+        $users = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $db = null;
+        echo json_encode($users);
+    }catch(PDOException $e){
+        echo '{"error":{"text":'. $e->getMessage() .'}}';
     }
 }

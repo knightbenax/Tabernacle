@@ -9,23 +9,18 @@
 
 <div class="row marketing">
 
-  <p ng-if="loading">Loading...</p>
+<div class="search_wrapper"><input type="text" placeholder="What are you looking for?"/></div>
 
-  <div ng-repeat="thing in awesomeThings">
-    <h4>{{thing.name}}</h4>
-    <p ng-if="thing.description">{{thing.description}}</p>
-    <p ng-if="thing.loading">Loading...</p>
-    <div ng-if="thing.error" class="alert alert-danger">
-      <strong>{{thing.error.statusText}}</strong>
-      <hr>
-      <p>{{thing.error.description}}</p>
-    </div>
-  </div>
-
-  <div ng-if="error" class="alert alert-danger">
-    <strong>{{error.statusText}}</strong>
-    <hr>
-    <p>{{error.description}}</p>
-  </div>
+<table class="data_wrapper">
+<tr class="data_wrapper_header">
+  <th>Name</th>
+  <th>Gender</th>
+  <th>First Timer</th>
+  <th>Date Registered</th>
+  <th>Tribe</th>
+  <th>Career</th>
+  <th>Phone No.</th>
+</tr>
+</table>
 
 </div>

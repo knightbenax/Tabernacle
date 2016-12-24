@@ -1,7 +1,120 @@
+@font-face {
+  font-family: 'Boing';
+  src: url('../fonts/boing/Boing_SemiboldWEB.eot');
+  src: url('../fonts/boing/Boing_SemiboldWEB.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/boing/Boing_SemiboldWEB.woff2') format('woff2'),
+    url('../fonts/boing/Boing_SemiboldWEB.woff') format('woff'),
+    url('../fonts/boing/Boing_SemiboldWEB.svg#ApercuPro-Bold') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chronica';
+    src: url('../fonts/chronica/ChronicaPro-Medium.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/chronica/ChronicaPro-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/chronica/ChronicaPro-Medium.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/chronica/ChronicaPro-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/chronica/ChronicaPro-Medium.svg#ChronicaPro-Medium') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Chronica';
+    src: url('../fonts/chronica/ChronicaPro-SemiLight.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/chronica/ChronicaPro-SemiLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/chronica/ChronicaPro-SemiLight.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/chronica/ChronicaPro-SemiLight.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/chronica/ChronicaPro-SemiLight.svg#ChronicaPro-SemiLight') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Chronica';
+    src: url('../fonts/chronica/ChronicaPro-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/chronica/ChronicaPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/chronica/ChronicaPro-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/chronica/ChronicaPro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/chronica/ChronicaPro-Regular.svg#ChronicaPro-SemiLight') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../fonts/graphik/Graphik-Light.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/graphik/../fonts/graphik/Graphik-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/graphik/Graphik-Light.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/graphik/Graphik-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/graphik/Graphik-Light.svg#Graphik-Light') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Graphik-Regular */
+@font-face {
+    font-family: 'Graphik';
+    src: url('../fonts/graphik/Graphik-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/graphik/Graphik-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/graphik/Graphik-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/graphik/Graphik-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/graphik/Graphik-Regular.svg#Graphik-Regular') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Graphik-Bold */
+@font-face {
+    font-family: 'Graphik';
+    src: url('../fonts/graphik/Graphik-Semibold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/graphik/Graphik-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/graphik/Graphik-Semibold.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/graphik/Graphik-Semibold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/graphik/Graphik-Semibold.svg#Graphik-Semibold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
 /* Space out content a bit */
 body {
   /*padding-top: 20px;*/
   padding-bottom: 20px;
+  font-family: Chronica;
+}
+
+.main_title{
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 16px;
+  margin-top: 1px;
+}
+
+.small_title{
+  display: block;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.nav-pills li{
+  margin-top: 6px;
+  margin-right: 25px;
+}
+
+.nav-pills li:last-of-type{
+  margin: 0px;
+}
+
+.nav-pills li span:nth-child(2){
+  font-size: 14px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -17,10 +130,20 @@ body {
   background-color: #508711;
   padding: 15px 20px;
   color: #fff;
+  position: fixed;
+  width: 100%;
 }
 
 .header img{
   width: 60px;
+}
+
+.user{
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 40px !important;
+  margin-top: 1px;
 }
 
 /* Make the masthead heading the same height as the navigation */
@@ -34,8 +157,55 @@ body {
 /* Custom page footer */
 .footer {
   padding-top: 19px;
+  font-size: 12px;
   color: #777;
+  text-align: center;
   border-top: 1px solid #e5e5e5;
+}
+
+.search_wrapper input[type='text']{
+  float: right;
+  margin-right: 20px;
+  border-radius: 3px;
+  padding: 7px 10px 6px;
+  border: 2px solid #979797;
+  min-width: 300px;
+}
+
+.search_wrapper{
+  display: inline-block;
+  width: 100%;
+}
+
+.data_wrapper{
+  display: table;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.data_wrapper_header{
+  background-color: #D8D8D8;
+
+}
+
+.data_wrapper th{
+  padding: 20px 10px;
+}
+
+.data_wrapper th:first-child{
+  padding-left: 40px;
+}
+
+.data_wrapper th:last-child{
+  padding-left: 20px;
+}
+
+tbody, tr{
+  width: 100%;
+}
+
+.glyphicon-heart{
+  color: red;
 }
 
 /* Customize container */
@@ -54,16 +224,16 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
 }
 .jumbotron .btn {
+
   font-size: 21px;
   padding: 14px 24px;
 }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+  margin: 30px 0;
 }
 .marketing p + h4 {
   margin-top: 28px;
@@ -82,5 +252,9 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+    margin-top: 70px;
+    margin-bottom: 0px;
+    background-color: #5D9C15;
+    border-radius: 0px !important;
   }
 }
