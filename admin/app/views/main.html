@@ -1,15 +1,56 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><span class="small_title">Total</span><span>{{getAllSignups()}}</span></li>
+    <li><span class="small_title">New</span><span>{{first_timer_signups_num}}</span></li>
+    <li><span class="small_title">Old</span><span>{{getOldSignups()}}</span></li>
+    <li><img class="user" src='images/user.jpg'/></li>
+  </ul>
+  <img src="images/ydilogo.png" /><span class="main_title">Spectral</span>
+</div>
+
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
+
+  <div class="graph"></div>
+  <script>
+
+  d3.json('api/signups_data', function(data) {
+    for (var i = 0; i < data.length; i++) {
+        //data[i] = MG.convert.date(data[i], 'date');
+    }
+
+    data_ = MG.convert.date(data, 'date');
+
+    MG.data_graphic({
+      title: "Camp Joseph 2016 Registration",
+      description: "Feast your eyes on the glorious number of people who registered for Camp Joseph 2016. Bwahahaha. Lol",
+      data: data_,//JSON.parse(document.querySelector('.data_signups').innerHTML),
+      /*markers: [{'year': 1964, 'label': '"The Creeping Terror" released'}],*/
+      width: 400,
+
+      height: 250,
+      /*baselines: [{value: 77, label: 'Peak Of Registration'}],*/
+      full_height: true,
+      full_width: true,
+      target: ".graph",
+      x_accessor: "date",
+      y_accessor: "signups",
+    });
+});
+
+
+
+  </script>
+  <!--<h1>'Allo, 'Allo!</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
     Always a pleasure scaffolding your apps.
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>-->
 </div>
 
 <div class="row marketing">
 
-<div class="search_wrapper"><input type="text" placeholder="What are you looking for?"/></div>
+<div class="search_wrapper"><input type="text" placeholder="What are you looking for?" my-enter="search()" ng-keyup="showSignUp()" ng-model="search_value"/></div>
 
 <table class="data_wrapper">
 <tr class="data_wrapper_header">
@@ -19,7 +60,18 @@
   <th>Date Registered</th>
   <th>Tribe</th>
   <th>Career</th>
-  <th>Phone No.</th>
+  <th>RSVP</th>
+  <!--<th>Phone No.</th>-->
+</tr>
+<tr ng-repeat="signup in signups" class="data_wrapper_body">
+  <td>{{signup.Fullname}}</td>
+  <td>{{signup.Gender}}</td>
+  <td>{{signup["First time at Camp"]}}</td>
+  <td>{{getDate(signup.epoch_time)}}</td>
+  <td>{{signup.Tribe}}</td>
+  <td>{{signup.Career}}</td>
+  <td><span ng-show="signup.Status=='Arrived'" class='arrived_tag'>Arrived</span><a ng-hide="signup.Status=='Arrived'" href="javascript:void(0)" ng-click="markAsArrived($event, signup.ID)">Not Arrived</a></td>
+  <!--<td>{{signup.Phone}}</td>-->
 </tr>
 </table>
 

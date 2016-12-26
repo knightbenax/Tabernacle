@@ -7,14 +7,137 @@
  * # MainCtrl
  * Controller of the spectralApp
  */
-angular.module('spectralApp').controller('MainCtrl', function ($scope, $http) {
+angular.module('spectralApp').controller('MainCtrl', function ($scope, $http, myService) {
 
   $scope.signups = [];
+  $scope.signups_graph = "";
+  $scope.search_value = "";
+
+  $scope.all_signups = 0;
+
+  $scope.first_timer_signups_num = 0;
 
   $http.get('api/signups').success(function (data) {
       $scope.signups = data;
+      $scope.all_signups = $scope.signups.length;
 
       //$("#big_daddy_bryan").css("display", "block");
   });
 
+  $http.get('api/first_timer_signups').success(function (data) {
+      $scope.first_timer_signups_num = data;
+
+      //$("#big_daddy_bryan").css("display", "block");
+  });
+
+  /*$http.get('api/signups_data').success(function (data) {
+      $scope.signups_graph = data;
+
+      //$("#big_daddy_bryan").css("display", "block");
+  });*/
+
+  $scope.getAllSignups = function(){
+    return $scope.all_signups;
+  }
+
+  $scope.search = function(){
+    NProgress.start();
+
+    var config = {
+      headers : {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+      }
+    }
+
+    var data = $.param({
+        search: $scope.search_value
+    });
+    //return ($scope.signups.length - $scope.first_timer_signups_num);
+    $http.post('api/do_search', data, config).success(function (data) {
+        //angular.element($event.target).parent().html("<span class='arrived_tag'>Arrived</span>");
+        $scope.signups = data;
+        NProgress.done();
+        //$("#big_daddy_bryan").css("display", "block");
+    });
+  }
+
+  $scope.getOldSignups = function(){
+    return ($scope.all_signups - $scope.first_timer_signups_num);
+  }
+
+  $scope.showSignUp = function(){
+    if ($scope.search_value == ""){
+      NProgress.start();
+      $http.get('api/signups').success(function (data) {
+          $scope.signups = data;
+          $scope.all_signups = $scope.signups.length;
+          NProgress.done();
+          //$("#big_daddy_bryan").css("display", "block");
+      });
+    }
+  }
+
+  $scope.markAsArrived = function($event, reg_ID){
+    NProgress.start();
+
+    var config = {
+      headers : {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+      }
+    }
+
+    var data = $.param({
+        ID: reg_ID
+    });
+    //return ($scope.signups.length - $scope.first_timer_signups_num);
+    $http.post('api/mark_arrived', data, config).success(function (data) {
+        angular.element($event.target).parent().html("<span class='arrived_tag'>Arrived</span>");
+        NProgress.done();
+        //$("#big_daddy_bryan").css("display", "block");
+    });
+
+  }
+
+  $scope.getDate = myService.getDate;
+
+});
+
+
+angular.module('spectralApp').directive('myEnter', function () {
+    return function (scope, element, attrs) {
+        element.bind("keydown keypress", function (event) {
+            if(event.which === 13) {
+                scope.$apply(function (){
+                    scope.$eval(attrs.myEnter);
+                });
+
+                event.preventDefault();
+            }
+        });
+    };
+});
+
+
+angular.module('spectralApp').factory('myService', function () {
+    return {
+        getDate: function (UNIX_timestamp) {
+            var a = new Date(UNIX_timestamp * 1000);
+            var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            var year = a.getFullYear();
+            var month = months[a.getMonth()];
+            var date = a.getDate();
+            var hour = a.getHours();
+            var min = a.getMinutes();
+            var sec = a.getSeconds();
+
+            var ampm = hour >= 12 ? 'pm' : 'am';
+
+            min = min < 10 ? '0' + min : min;
+
+            hour = hour % 12;
+
+            var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ampm; // + ':' + sec ;
+            return time;
+        }
+    }
 });

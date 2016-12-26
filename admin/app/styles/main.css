@@ -132,6 +132,7 @@ body {
   color: #fff;
   position: fixed;
   width: 100%;
+  top:0px;
 }
 
 .header img{
@@ -160,7 +161,16 @@ body {
   font-size: 12px;
   color: #777;
   text-align: center;
-  border-top: 1px solid #e5e5e5;
+  /*border-top: 1px solid #e5e5e5;*/
+}
+
+.footer p{
+  margin-bottom: 0px;
+}
+
+.footer a{
+  color: #777;
+  text-decoration: none;
 }
 
 .search_wrapper input[type='text']{
@@ -181,6 +191,7 @@ body {
   display: table;
   width: 100%;
   margin-top: 30px;
+  table-layout: auto;
 }
 
 .data_wrapper_header{
@@ -188,12 +199,55 @@ body {
 
 }
 
+.data_wrapper_body td:first-child{
+  text-transform: capitalize;
+}
+
+.data_wrapper_body td:nth-child(2) {
+    text-transform: capitalize;
+}
+
+.data_wrapper th:nth-child(3) {
+    width: 15%;
+}
+
+.data_wrapper th:nth-child(6){
+  width: 10%;
+}
+
+.data_wrapper th:nth-child(7){
+  width: 13%;
+}
+
+.data_wrapper th:nth-child(2) {
+    width: 10%;
+
+}
+
+.data_wrapper_body td{
+  padding: 20px 10px;
+}
+
+.data_wrapper_body{
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.data_wrapper_body td:first-child{
+  padding-left: 30px;
+}
+
+
+
+.data_wrapper_body td:last-child{
+  padding-left: 20px;
+}
+
 .data_wrapper th{
   padding: 20px 10px;
 }
 
 .data_wrapper th:first-child{
-  padding-left: 40px;
+  padding-left: 30px;
 }
 
 .data_wrapper th:last-child{
@@ -206,6 +260,26 @@ tbody, tr{
 
 .glyphicon-heart{
   color: red;
+}
+
+.data_signups{
+  display: none;
+}
+
+.graph{
+  padding-top: 10px;
+}
+
+.arrived_tag{
+  padding: 6px 10px 5px;
+  color: #fff;
+  background-color: #5D9C15;
+  line-height: 0px;
+letter-spacing: 0;
+}
+
+.jumbotron{
+  padding: 25px 20px !important;
 }
 
 /* Customize container */
@@ -224,6 +298,7 @@ tbody, tr{
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
+  height: 390px;
 }
 .jumbotron .btn {
 
@@ -231,9 +306,16 @@ tbody, tr{
   padding: 14px 24px;
 }
 
+
+
+.jumbotron .graph{
+  width: 100%;
+  height: 100%;
+}
+
 /* Supporting marketing content */
 .marketing {
-  margin: 30px 0;
+  margin: 30px 0 0;
 }
 .marketing p + h4 {
   margin-top: 28px;

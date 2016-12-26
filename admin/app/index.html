@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Spectral</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -13,6 +13,8 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/nprogress.css">
+    <link rel="stylesheet" href="styles/metricsgraphics.css">
     <!-- endbuild -->
   </head>
   <body ng-app="spectralApp">
@@ -22,20 +24,12 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><span class="small_title">Total</span><span>56,900</span></li>
-          <li><span class="small_title">New</span><span>56,900</span></li>
-          <li><span class="small_title">Old</span><span>56,900</span></li>
-          <li><img class="user" src='images/user.jpg'/></li>
-        </ul>
-        <img src="images/ydilogo.png" /><span class="main_title">Spectral</span>
-      </div>
+
 
       <div ng-view=""></div>
 
       <div class="footer">
-        <p>Crafted In Baruwa, Lagos With <span class="glyphicon glyphicon-heart"></span> By Ephod&trade;</p>
+        <p>Crafted In Baruwa, Lagos With <span class="glyphicon glyphicon-heart"></span><a href="http://ephodng.com" target="_blank"> Ephod&trade;</a></p>
       </div>
     </div>
 
@@ -72,7 +66,12 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/nprogress.js" charset="utf-8"></script>
         <script src="scripts/app.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js' charset='utf-8'></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="scripts/metricsgraphics.js"></script>
+        <script src="scripts/lib/ace.js" charset="utf-8"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
