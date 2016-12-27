@@ -2,4 +2,6 @@
 
 [![Knightbenax Approved](http://ephodng.com/knightbenax-badge.svg)](https://twitter.com/knightbenax)
 
-Official Avatar App for Camp Joseph 2016
+Official App-Suite for Camp Joseph 2016
+
+![Alt text](/desc.png?raw=true "Optional Title")
