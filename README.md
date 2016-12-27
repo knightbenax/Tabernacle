@@ -4,4 +4,4 @@
 
 Official App-Suite for Camp Joseph 2016
 
-![Alt text](/desc.png?raw=true "Optional Title")
+![Spectral - The Admin Backend that manages registration](/desc.png?raw=true "Spectral - The Admin Backend that manages registration")
