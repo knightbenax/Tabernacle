@@ -1,4 +1,4 @@
-# Camp-Joseph-2016-Avatar-Web-App
+# Camp-Joseph-2016-Web-Apps-Suite
 
 [![Knightbenax Approved](http://ephodng.com/knightbenax-badge.svg)](https://twitter.com/knightbenax)
 
