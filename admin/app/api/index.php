@@ -26,6 +26,7 @@ try {
     $app->get('/signups_data', 'getGraphData');
     $app->post('/do_search', 'search');
     $app->post('/mark_arrived', 'markAsArrived');
+    $app->get('/arrivals', 'getArrivals');
     $app->run();
 
 
@@ -78,6 +79,20 @@ function getUsers(){
         $users = $stmt->fetchAll(PDO::FETCH_OBJ);
         $db = null;
         echo json_encode($users);
+    }catch(PDOException $e){
+        echo '{"error":{"text":'. $e->getMessage() .'}}';
+    }
+}
+
+
+function getArrivals(){
+    $sql = "SELECT COUNT(*) FROM cj2016_participants WHERE `Status` = 'Arrived'";
+    try{
+        $db = getConnection();
+        $stmt = $db->query($sql);
+        $users = $stmt->fetch(PDO::FETCH_NUM);
+        $db = null;
+        echo $users[0];
     }catch(PDOException $e){
         echo '{"error":{"text":'. $e->getMessage() .'}}';
     }

@@ -6,6 +6,7 @@
     <li><span class="small_title">Total</span><span>{{getAllSignups()}}</span></li>
     <li><span class="small_title">New</span><span>{{first_timer_signups_num}}</span></li>
     <li><span class="small_title">Old</span><span>{{getOldSignups()}}</span></li>
+<li><span class="small_title">Arrived</span><span>{{getArrivals()}}</span></li>
     <li><img class="user" src='images/user.jpg'/></li>
   </ul>
   <img src="images/ydilogo.png" /><span class="main_title">Spectral</span>
@@ -14,7 +15,7 @@
 <div class="jumbotron">
 
   <div class="graph"></div>
-  <script>
+  <!--<script>
 
   d3.json('api/signups_data', function(data) {
     for (var i = 0; i < data.length; i++) {
@@ -41,8 +42,8 @@
 });
 
 
-
-  </script>
+.
+  </script>-->
   <!--<h1>'Allo, 'Allo!</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>

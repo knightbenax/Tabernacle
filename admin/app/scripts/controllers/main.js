@@ -12,6 +12,7 @@ angular.module('spectralApp').controller('MainCtrl', function ($scope, $http, my
   $scope.signups = [];
   $scope.signups_graph = "";
   $scope.search_value = "";
+  $scope.arrivals = "";
 
   $scope.all_signups = 0;
 
@@ -29,7 +30,7 @@ angular.module('spectralApp').controller('MainCtrl', function ($scope, $http, my
             //data[i] = MG.convert.date(data[i], 'date');
         }
 
-        data_ = MG.convert.date(data, 'date');
+        var data_ = MG.convert.date(data, 'date');
 
         MG.data_graphic({
           title: "Camp Joseph 2016 Registration",
@@ -38,10 +39,13 @@ angular.module('spectralApp').controller('MainCtrl', function ($scope, $http, my
           /*markers: [{'year': 1964, 'label': '"The Creeping Terror" released'}],*/
           width: 400,
 
-          height: 250,
+          height: 280,
           /*baselines: [{value: 77, label: 'Peak Of Registration'}],*/
           full_height: true,
           full_width: true,
+          yax_count: 6,
+          max_y: 400,
+
           target: ".graph",
           x_accessor: "date",
           y_accessor: "signups",
@@ -56,6 +60,10 @@ angular.module('spectralApp').controller('MainCtrl', function ($scope, $http, my
       //$("#big_daddy_bryan").css("display", "block");
   });
 
+  $http.get('api/arrivals').success(function (data) {
+      $scope.arrivals = data;
+  });
+
   /*$http.get('api/signups_data').success(function (data) {
       $scope.signups_graph = data;
 
@@ -64,6 +72,10 @@ angular.module('spectralApp').controller('MainCtrl', function ($scope, $http, my
 
   $scope.getAllSignups = function(){
     return $scope.all_signups;
+  }
+
+  $scope.getArrivals = function(){
+    return $scope.arrivals;
   }
 
   $scope.search = function(){
