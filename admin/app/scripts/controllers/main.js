@@ -20,7 +20,33 @@ angular.module('spectralApp').controller('MainCtrl', function ($scope, $http, my
   $http.get('api/signups').success(function (data) {
       $scope.signups = data;
       $scope.all_signups = $scope.signups.length;
+      angular.element("#big_daddy_bryan").css("display", "block");
+      angular.element(".loader").css("display", "none");
 
+      //re-forked the damn graph. Phew
+      d3.json('api/signups_data', function(data) {
+        for (var i = 0; i < data.length; i++) {
+            //data[i] = MG.convert.date(data[i], 'date');
+        }
+
+        data_ = MG.convert.date(data, 'date');
+
+        MG.data_graphic({
+          title: "Camp Joseph 2016 Registration",
+          description: "Feast your eyes on the glorious number of people who registered for Camp Joseph 2016. Bwahahaha. Lol",
+          data: data_,//JSON.parse(document.querySelector('.data_signups').innerHTML),
+          /*markers: [{'year': 1964, 'label': '"The Creeping Terror" released'}],*/
+          width: 400,
+
+          height: 250,
+          /*baselines: [{value: 77, label: 'Peak Of Registration'}],*/
+          full_height: true,
+          full_width: true,
+          target: ".graph",
+          x_accessor: "date",
+          y_accessor: "signups",
+        });
+    });
       //$("#big_daddy_bryan").css("display", "block");
   });
 
