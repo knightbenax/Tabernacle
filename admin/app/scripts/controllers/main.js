@@ -44,7 +44,7 @@ angular.module('spectralApp').controller('MainCtrl', function ($scope, $http, my
           full_height: true,
           full_width: true,
           yax_count: 6,
-          max_y: 400,
+          max_y: 500,
 
           target: ".graph",
           x_accessor: "date",

@@ -46,7 +46,7 @@ try {
     }
 }
 
-/*function getConnection()
+function getConnection()
 {
     $dbhost="XpertProCombined";
     //$dbport="8889";
@@ -56,9 +56,9 @@ try {
     $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $dbh;
-}*/
+}
 
-function getConnection()
+/*function getConnection()
 {
     $dbhost="127.0.0.1";
     //$dbport="8889";
@@ -68,7 +68,7 @@ function getConnection()
     $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $dbh;
-}
+}*/
 
 
 function getUsers(){
