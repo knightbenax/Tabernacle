@@ -217,7 +217,7 @@ function getGraphData(){
 
         //echo rtrim($value, ",");
 
-        $value_new = substr_replace($value ,"",-1);;
+        $value_new = substr_replace($value ,"", -1);;
 
         $value = $value_new . "]";
 
