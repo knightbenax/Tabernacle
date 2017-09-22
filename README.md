@@ -1,8 +1,8 @@
-# Camp-Joseph-2016-Web-Apps-Suite
+# Camp-Joseph-Web-Apps-Suite
 
 [![Knightbenax Approved](http://ephodng.com/knightbenax-badge.svg)](https://twitter.com/knightbenax)
 
-Official App-Suite for Camp Joseph 2016. 
+Official App-Suite for YDi's Camp Joseph. (2016 till date) 
 
 This covers both front-facing and internal/backend apps
 
