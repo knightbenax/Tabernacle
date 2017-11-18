@@ -1,0 +1,161 @@
+
+html, body {
+    background-color: #08511f;
+    color: #fff;
+    font-family: 'Cabin', sans-serif;    
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+
+.large_guy{
+    font-family: 'Passion One', cursive;
+}
+
+.top {
+    position: relative;
+    overflow: hidden;
+}
+
+.big_header{
+    position: absolute;
+    z-index: 5;
+    height: 100vh;
+    width: 450px;
+    left: 0px;
+    top: 0px;
+    text-align: right;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    line-height: 0.95;
+    flex-direction: column;
+}
+
+.big_header div:first-child{
+    font-size: 102px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.big_header div:nth-of-type(2){
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.slide_container{
+    display: flex;
+    width: 100%;
+}
+
+.top .slide{
+    /*position: relative;*/
+    z-index: 4;
+    background: #366301;
+    bottom: 0px;
+    left: -530px;
+    /*transform-origin: right bottom;*/
+    transform: rotate(344deg);
+    width: 25%;
+    height: 150vh;
+    top: -180px;
+    overflow: hidden;
+}
+
+.top .slide.one{
+    margin-left: -150px;
+    width: 40%;
+}
+
+.top .slide.two{
+    /*width: 500px;*/
+}
+
+.top .slide.two:before{
+    background-image: url('../images/_MD06048.JPG');
+    left: -270px;
+    width: 180%;
+    top: 0px;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background-size: cover;
+    background-position: center 150px;
+    transform-origin: right bottom;
+    transform: rotate(15deg);
+}
+
+.top .slide.three{
+    
+    /*width: 500px;*/
+}
+
+.top .slide.three:before{
+    background-image: url('../images/_MD05755.JPG');
+    left: -270px;
+    width: 180%;
+    top: 0px;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background-size: cover;
+    background-position: center 150px;
+    transform-origin: right bottom;
+    transform: rotate(15deg);
+}
+
+.top .slide.four{
+    margin-right: -120px;
+    width: 30%;
+    /*width: 500px;*/
+}
+
+
+
+.full-height {
+    height: 100vh;
+    
+    background-size: cover;
+    background-position: center;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
