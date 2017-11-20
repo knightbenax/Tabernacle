@@ -21,7 +21,7 @@ html, body {
     position: fixed;
     z-index: 5;
     height: 100vh;
-    width: 32%;
+    width: 30%;
     left: 0px;
     top: 0px;
     text-align: right;
@@ -30,22 +30,40 @@ html, body {
     justify-content: center;
     line-height: 0.95;
     flex-direction: column;
-    text-shadow: 2px 2px #000000;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.6),
+    0px 8px 13px rgba(0,0,0,0.5),
+    0px 18px 23px rgba(0,0,0,0.5);
 }
 
-.big_header div:first-child{
-    font-size: 102px;
+#big_header_second{
+    width: 35%;
+}
+
+.big_header .title, .big_header .sec_title{
+    font-size: 80px;
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
-.big_header div:nth-of-type(2){
+.big_header .subtitle, .big_header .sec_subtitle{
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 10px;
     padding-right: 10px;
     font-weight: bold;
+    line-height: 1.3;
 }
+
+.big_header .subtitle.small{
+    font-size: 25px;
+    text-transform: none;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+
 
 .slide_container{
     display: flex;
@@ -132,7 +150,7 @@ html, body {
     content: '';
     position: absolute;
     background-size: 100%;
-    background-position: center 5px;
+    background-position: center 90px;
     transform-origin: right bottom;
     transform: rotate(15deg);
 }
@@ -146,7 +164,7 @@ html, body {
     content: '';
     position: absolute;
     background-size: 100%;
-    background-position: center;
+    background-position: center -90px;
     transform-origin: right bottom;
     transform: rotate(15deg);
 }
@@ -197,14 +215,55 @@ html, body {
     transform: rotate(15deg);
 }
 
-
 .logo{
     position: fixed;
-    left: 25px;
+    left: 30px;
     top: 25px;
     width: 55px;
     z-index: 6;
+}
 
+.talk_about{
+    position: fixed;
+    top: 0px;
+    left:0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.first_take{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.show{
+    background-size: cover;
+    background-position: center;
+    width: 550px;
+    height: 350px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 0 7px 15px rgba(0,0,0,.6);
+    box-shadow: 0 7px 15px rgba(0,0,0,.6);
+    -moz-box-shadow: 0 7px 15px rgba(0,0,0,.6);
+}
+
+.first_image{
+    background-image: url('../images/CJ54.jpeg');
+}
+
+.second_image{
+    background-image: url('../images/cj39.jpeg');
+}
+
+.sliver{
+    padding: 90px 0px;
+    width: 80%;
+    margin: auto;
 }
 
 .logo img{
