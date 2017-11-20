@@ -18,10 +18,10 @@ html, body {
 }
 
 .big_header{
-    position: absolute;
+    position: fixed;
     z-index: 5;
     height: 100vh;
-    width: 450px;
+    width: 32%;
     left: 0px;
     top: 0px;
     text-align: right;
@@ -30,6 +30,7 @@ html, body {
     justify-content: center;
     line-height: 0.95;
     flex-direction: column;
+    text-shadow: 2px 2px #000000;
 }
 
 .big_header div:first-child{
@@ -49,17 +50,18 @@ html, body {
 .slide_container{
     display: flex;
     width: 100%;
+    position: fixed;
 }
 
 .top .slide{
     /*position: relative;*/
     z-index: 4;
-    background: #366301;
+    /*background: #366301;*/
     bottom: 0px;
     left: -530px;
     /*transform-origin: right bottom;*/
     transform: rotate(344deg);
-    width: 25%;
+    width: 29%;
     height: 150vh;
     top: -180px;
     overflow: hidden;
@@ -67,14 +69,21 @@ html, body {
 
 .top .slide.one{
     margin-left: -150px;
-    width: 40%;
+    width: 35%;
 }
 
-.top .slide.two{
-    /*width: 500px;*/
+.top .slide.two .bad_guy, .top .slide.two .bad_guy_two{
+    z-index: 4;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-.top .slide.two:before{
+.top .slide.two .bad_guy::before{
     background-image: url('../images/_MD06048.JPG');
     left: -270px;
     width: 180%;
@@ -88,14 +97,81 @@ html, body {
     transform: rotate(15deg);
 }
 
-.top .slide.three{
-    
+.top .slide.two .bad_guy_two::before{
+    background-image: url('../images/_MD05665.JPG');
+    left: -270px;
+    width: 180%;
+    top: 0px;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background-size: cover;
+    background-position: center -10px;
+    transform-origin: right bottom;
+    transform: rotate(15deg);
+}
+
+.top .slide.three .bad_guy, .top .slide.three .bad_guy_two{
+    z-index: 4;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.top .slide.three .bad_guy::before{
+    background-image: url('../images/_MD05755.JPG');
+    left: -270px;
+    width: 180%;
+    top: 0px;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background-size: 100%;
+    background-position: center 5px;
+    transform-origin: right bottom;
+    transform: rotate(15deg);
+}
+
+.top .slide.three .bad_guy_two::before{
+    background-image: url('../images/_MD05949.JPG');
+    left: -270px;
+    width: 180%;
+    top: 0px;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background-size: 100%;
+    background-position: center;
+    transform-origin: right bottom;
+    transform: rotate(15deg);
+}
+
+.top .slide.four{
+    margin-right: -120px;
+    width: 30%;
     /*width: 500px;*/
 }
 
-.top .slide.three:before{
-    background-image: url('../images/_MD05755.JPG');
-    left: -270px;
+.top .slide.four .bad_guy, .top .slide.four .bad_guy_two{
+    z-index: 4;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.top .slide.four .bad_guy::before{
+    background-image: url('../images/_MD05804.JPG');
+    left: -420px;
     width: 180%;
     top: 0px;
     height: 100%;
@@ -107,13 +183,33 @@ html, body {
     transform: rotate(15deg);
 }
 
-.top .slide.four{
-    margin-right: -120px;
-    width: 30%;
-    /*width: 500px;*/
+.top .slide.four .bad_guy_two::before{
+    background-image: url('../images/_MD05779.JPG');
+    left: -420px;
+    width: 180%;
+    top: 0px;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background-size: cover;
+    background-position: -60px 150px;
+    transform-origin: right bottom;
+    transform: rotate(15deg);
 }
 
 
+.logo{
+    position: fixed;
+    left: 25px;
+    top: 25px;
+    width: 55px;
+    z-index: 6;
+
+}
+
+.logo img{
+    width: 100%;
+}
 
 .full-height {
     height: 100vh;
