@@ -1,6 +1,7 @@
 
 html, body {
-    background-color: #08511f;
+    /*background-color: #08511f;*/
+    background-color: #5f7801;
     color: #fff;
     font-family: 'Cabin', sans-serif;    
     font-weight: 100;
@@ -15,6 +16,17 @@ html, body {
 .top {
     position: relative;
     overflow: hidden;
+}
+
+.tagline{
+    font-family: 'Changa One', cursive;
+    font-size: 35px;
+    margin-bottom: 3px;
+}
+
+.sub{
+    font-size: 12px;
+    display: block;
 }
 
 .big_header{
@@ -83,6 +95,7 @@ html, body {
     height: 150vh;
     top: -180px;
     overflow: hidden;
+    border: 8px solid #fff;
 }
 
 .top .slide.one{
@@ -109,8 +122,8 @@ html, body {
     height: 100%;
     content: '';
     position: absolute;
-    background-size: cover;
-    background-position: center 150px;
+    background-size: 190%;
+    background-position: -340px 200px;
     transform-origin: right bottom;
     transform: rotate(15deg);
 }
@@ -123,8 +136,8 @@ html, body {
     height: 100%;
     content: '';
     position: absolute;
-    background-size: cover;
-    background-position: center -10px;
+    background-size: 205%;
+    background-position: center;
     transform-origin: right bottom;
     transform: rotate(15deg);
 }
@@ -217,10 +230,38 @@ html, body {
 
 .logo{
     position: fixed;
-    left: 30px;
-    top: 25px;
+    left: 25px;
+    top: 20px;
     width: 55px;
     z-index: 6;
+}
+
+.churchhill{
+    position: fixed;
+    left: 25px;
+    bottom: 20px;
+    z-index: 6;
+}
+
+.register{
+    position: fixed;
+    right: 25px;
+    top: 20px;
+    z-index: 1;
+}
+
+.button{
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px 25px;
+    border-radius: 3px;
+    line-height: normal;
+    display: inline-block;
+    -webkit-box-shadow: 0 7px 15px rgba(0,0,0,.6);
+    box-shadow: 0 7px 15px rgba(0,0,0,.6);
+    -moz-box-shadow: 0 7px 15px rgba(0,0,0,.6);
+    color: #000;
+    font-weight: bold;
 }
 
 .talk_about{
@@ -242,14 +283,16 @@ html, body {
 .show{
     background-size: cover;
     background-position: center;
-    width: 550px;
-    height: 350px;
+    width: 500px;
+    height: 300px;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -webkit-box-shadow: 0 7px 15px rgba(0,0,0,.6);
     box-shadow: 0 7px 15px rgba(0,0,0,.6);
     -moz-box-shadow: 0 7px 15px rgba(0,0,0,.6);
+    margin-right: 35px;
+    display: inline-block;
 }
 
 .first_image{
@@ -260,8 +303,71 @@ html, body {
     background-image: url('../images/cj39.jpeg');
 }
 
+.third_image{
+    background-image: url('../images/CJ85.jpeg');
+}
+
+.four_image{
+    background-image: url('../images/CJ071.jpeg');
+}
+
+.five_image{
+    background-image: url('../images/CJ055.jpeg');
+}
+
+.six_image{
+    background-image: url('../images/CJ50.jpeg');
+}
+
+.seven_image{
+    background-image: url('../images/cj33.jpeg');
+}
+
+.eight_image{
+    background-image: url('../images/CJ75.jpeg');
+}
+
+.nine_image{
+    background-image: url('../images/CJ103.jpeg');
+}
+
+.ten_image{
+    background-image: url('../images/CJ78.jpeg');
+}
+
+.tell{
+    text-align: center;
+}
+
+.yellow{
+    color: #F5B901;
+    text-decoration: underline;
+}
+
+.black{
+    color: #000;
+    text-decoration: underline;
+}
+
+.enlarged_green{
+    color: #97BE01;
+}
+
+.green{
+    color: rgb(6, 164, 255);
+    text-decoration: underline;
+}
+
+.experience{
+    font-size: 40px;
+}
+
+.gallery{
+    white-space: nowrap;
+    padding: 100px 0px 40px 70px;
+}
+
 .sliver{
-    padding: 90px 0px;
     width: 80%;
     margin: auto;
 }
