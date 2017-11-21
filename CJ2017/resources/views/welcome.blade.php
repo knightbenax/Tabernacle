@@ -1,3 +1,5 @@
+<!--All magic here made by Ashefor Bezaleel 2017 a.k.a Baby Boy Bez a.k.a Uncle Bez a.k.a Big Daddy Bez-->
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -9,6 +11,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Passion+One:700" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet"> 
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}"  />
@@ -38,7 +41,13 @@
             </div>
 
             <div class="register">
-                <a href="" class="button">Register</a>
+                <a href="" class="button">Register for CJ 2017</a>
+            </div>
+
+            <div class="churchhill">
+                <div class="subtitle tagline" >Enlargement<span class="sub">(17th Edition)</span></div>
+                <div class="subtitle small">Dec 27th - 30th 2017</div>
+                <div class="subtitle small">Faith Academy Canaanland, Ota</div>
             </div>
 
             <div class="content">
@@ -48,8 +57,8 @@
             <div class="big_header" id="big_header">
                 <div class="first_title">
                     <div class="large_guy title">Camp<br/>Joseph<br/>2017</div>
-                    <div class="subtitle">Enlargement</div>
-                    <div class="subtitle small">Dec 27th - 30th 2017</div>
+                    <div class="subtitle enlarged_green" style="display:none">Enlargement</div>
+                    <div class="subtitle small">A YDi Youth Conference</div>
                 </div>
             </div>
 
@@ -80,16 +89,38 @@
 
             <div class="talk_about">
                 <div class="first_take">
-                    <div class="sliver gallery">
-                        <div class="first_image show"></div>
-                        <div class="second_image show"></div>
+                    <div>
+                        <div class="gallery">
+                            <div class="first_image show"></div>
+                            <div class="second_image show"></div>
+                            <div class="third_image show"></div>
+                            <div class="four_image show"></div>
+                            <div class="five_image show"></div>
+                            <div class="six_image show"></div>
+                            <div class="seven_image show"></div>
+                            <div class="eight_image show"></div>
+                            <div class="nine_image show"></div>
+                            <div class="ten_image show"></div>
+                        </div>
+                    </div>
+                    <div class="sliver tell">
+                        <span class="experience">Manifestation of grace, glory and grooming of the Joseph generation</span>
                     </div>
                 </div>
             </div>
+
+            <div class="camp_details">
+                
+            </div>
+
+
         </div>
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="{{ asset('/js/skrollr.min.js') }}"></script>
         <script type="text/javascript">
+
+        console.log("Hmm, so you like to peek under the hood to see how things work right? ;) Well hit me up on github, let's make magic - http://github.com/knightbenax");
+
         var windowWidth = window.innerWidth;
         var windowHeight = window.innerHeight;
 
@@ -97,6 +128,10 @@
 
         var data_height = "data-" + halfWindowHeight;
         var full_data_height = "data-" + (windowHeight + 300 + 200);
+
+        var full_data_height_c = "data-" + (windowHeight + 300 + 500);
+
+        var more_full_data_height_c = "data-" + (windowHeight + 300 + 880);
     
         var data_width = $(".bad_guy").innerWidth();
 
@@ -122,6 +157,10 @@
         $(".talk_about").attr(full_data_height, "opacity:1;");
 
         $("#big_header_second").attr(full_data_height, "opacity:0;");
+
+        $(".gallery").attr(full_data_height_c, "transform: translate(0px);");more_full_data_height_c
+        $(".gallery").attr(more_full_data_height_c, "transform: translate(-4200px);");
+
         //$(".bio_bounce").attr(data_height, "margin-top:-600px;opacity:0.3");
         //$(".bio_bounce_reverse").attr(data_height, "margin-top:600px;opacity:0.3");
 
