@@ -10,8 +10,8 @@
         <title>CJ 2017 - Enlargement</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Passion+One:700" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Passion+One:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet">
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}"  />
@@ -51,7 +51,7 @@
             </div>
 
             <div class="content">
-                
+
             </div>
 
             <div class="big_header" id="big_header">
@@ -67,7 +67,7 @@
                     <div class="sec_subtitle">Largest<br/> Homecoming Of</div>
                     <div class="large_guy sec_title">The<br/>Successor<br/>Generation</div>
                 </div>
-                
+
             </div>
 
             <div class='slide_container'>
@@ -110,7 +110,49 @@
             </div>
 
             <div class="camp_details">
-                
+                <div class="sliver details text">
+                    <div class="details_title">
+                        <div class="overlay"></div>
+                        <span>Camp Details</span>
+                    </div>
+                    <div class="section">
+                        <div class="atiku">Sessions</div>
+                            <div>
+                            The Word, One-on-one Counselling, Academic, Family, Politics, Social Entrepreneurship, Career & Business Seminars.
+                            </div>
+                        </div>
+
+
+                    <div class="section">
+                        <div class="atiku">Features</div>
+                            <div>
+                            Special Marriage Clinic, Sport Activities
+                            </div>
+                        </div>
+
+
+                        <div class="section">
+                            <div class="atiku">DINNER NIGHT EVENT</div>
+                            <div>
+                            Theme: (the Enlarged Class)<br/>Color Code: White & Black<br/>DINNER FEE: 1000 Naira Only Per Head<br/>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="atiku">Registration & Accommodation</div>
+                            <div>
+                            Registration & Accommodation Fee: Nil<br/>Feeding will also be served free %F except for the dinner night, extra portions will be paid for. CRECHE AVAILABLE too
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div>
+                            There would be Squad activities on camp... Other incentives to come to camp include free uber rides for people who participate on Instagram engagements. Instagram Handle <a href="http://instagram.com/officialydi" target="_blank">@officialydi</a> Follow the handle for registration details 
+                            
+                            <br/>For further enquiries please call: 012934286<br/>08023124455<br/>08136408007 
+                            </div>
+                        </div>
+                </div>
             </div>
 
 
@@ -132,7 +174,11 @@
         var full_data_height_c = "data-" + (windowHeight + 300 + 500);
 
         var more_full_data_height_c = "data-" + (windowHeight + 300 + 880);
-    
+
+        var even_more_full_data_height_c = "data-" + (windowHeight + 300 + 1380);
+
+        var real_more_full_data_height_c = "data-" + (windowHeight + 300 + 1420);
+
         var data_width = $(".bad_guy").innerWidth();
 
         var xc = halfWindowHeight + 300;
@@ -161,6 +207,14 @@
         $(".gallery").attr(full_data_height_c, "transform: translate(0px);");more_full_data_height_c
         $(".gallery").attr(more_full_data_height_c, "transform: translate(-4200px);");
 
+        $(".camp_details").attr(even_more_full_data_height_c, "opacity:0;");
+        $(".camp_details").attr(real_more_full_data_height_c, "opacity:1;");
+
+        $(".talk_about").attr(even_more_full_data_height_c, "opacity:1;");
+        $(".talk_about").attr(real_more_full_data_height_c, "opacity:0;");
+
+        $(".churchhill").attr(even_more_full_data_height_c, "opacity:1;");
+        $(".churchhill").attr(real_more_full_data_height_c, "opacity:0;");
         //$(".bio_bounce").attr(data_height, "margin-top:-600px;opacity:0.3");
         //$(".bio_bounce_reverse").attr(data_height, "margin-top:600px;opacity:0.3");
 
