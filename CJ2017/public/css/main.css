@@ -323,11 +323,21 @@ html, body {
     line-height: 1.8;
 }
 
+
+.section a.button{
+    color: #000 !important;
+    font-size: 30px !important;
+    text-align: center;
+    text-decoration: none;
+}
+
+
 .section a{
     color: #fff;
     text-decoration: underline;
     
 }
+
 
 .speaker_img{
     width: 180px;

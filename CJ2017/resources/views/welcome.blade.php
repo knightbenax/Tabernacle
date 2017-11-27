@@ -208,6 +208,11 @@ He was recognized as one of the 1,000 outstanding young leaders committed to imp
                                 <div class="speaker_tag">ED of SESEWA</div>
                                 Kunbi is the executive director of SESEWA; a company she founded while still in university in 2009. She holds an LLB from Obafemi Awolowo University and was enrolled as a solicitor and advocate of the Supreme Court of Nigeria in 2010. Her company, SESEWA is at the forefront of providing internship and career opportunities for Nigeria's young generation and she is building a legacy for internship businesses in Nigeria. Adekunbi is a frequent speaker at youth events, and a big inspiration for young people in Africa. Upon completion of the Mandela Washington Fellowship, she hopes to expand SESEWA programs across several states in Nigeria and beyond to neighboring cities in Africa.
                         </div>
+                        <br/><br/>
+                        <div class="section">
+                            <a href="{{ url('/register')}}" class="button">Register for CJ 2017</a>
+                        </div>
+
 
 
             </div>
