@@ -10,8 +10,8 @@
         <title>CJ 2017 - Enlargement</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Passion+One:700" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Passion+One:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet">
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}"  />
@@ -41,7 +41,7 @@
             </div>
 
             <div class="register">
-                <a href="" class="button">Register for CJ 2017</a>
+                <a href="{{ url('/register')}}" class="button">Register for CJ 2017</a>
             </div>
 
             <div class="churchhill">
@@ -51,7 +51,7 @@
             </div>
 
             <div class="content">
-                
+
             </div>
 
             <div class="big_header" id="big_header">
@@ -67,7 +67,7 @@
                     <div class="sec_subtitle">Largest<br/> Homecoming Of</div>
                     <div class="large_guy sec_title">The<br/>Successor<br/>Generation</div>
                 </div>
-                
+
             </div>
 
             <div class='slide_container'>
@@ -110,7 +110,111 @@
             </div>
 
             <div class="camp_details">
-                
+                <div class="sliver details text">
+                    <div class="details_title">
+                        <div class="overlay"></div>
+                        <span>Camp Details</span>
+                    </div>
+                    <div class="section">
+                        <div class="atiku">Sessions</div>
+                            <div>
+                            The Word, One-on-one Counselling, Academic, Family, Politics, Social Entrepreneurship, Career & Business Seminars.
+                            </div>
+                        </div>
+
+
+                    <div class="section">
+                        <div class="atiku">Features</div>
+                            <div>
+                            Special Marriage Clinic, Sport Activities
+                            </div>
+                        </div>
+
+
+                        <div class="section">
+                            <div class="atiku">DINNER NIGHT EVENT</div>
+                            <div>
+                            Theme: (the Enlarged Class)<br/>Color Code: White & Black<br/>DINNER FEE: 1000 Naira Only Per Head<br/>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="atiku">Registration & Accommodation</div>
+                            <div>
+                            Registration & Accommodation Fee: Nil<br/>Feeding will also be served free %F except for the dinner night, extra portions will be paid for. CRECHE AVAILABLE too
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div>
+                            There would be Squad activities on camp... Other incentives to come to camp include free uber rides for people who participate on Instagram engagements. Instagram Handle <a href="http://instagram.com/officialydi" target="_blank">@officialydi</a> Follow the handle for registration details
+                            <br/>For further enquiries please call: 012934286<br/>08023124455<br/>08136408007
+                            </div>
+                        </div>
+                        <br/><br/>
+                        <div class="section">
+                            <div class="speaker_img sam"></div>
+                            <div class="speaker_details">
+                                <div class="speaker_name">Dr. Sam Oyemade</div>
+                                <div class="speaker_tag">Financial Expert And Gospel Minister</div>
+                            Sam Oyemade is a Chartered Accountant of about two (2) decades and Chartered Tax Practioner with many years professional experience as an external auditor,Tax and Business Management Consultant to many reputable Organisations & Institutions.
+                            <br/><br/>He is the President Bearer of Light Missions World Outreach and MP Sam Oyemade & Co (FCS)
+                            </div>
+                        </div>
+                        <br/><br/>
+                        <div class="section">
+                            <div class="speaker_img hettie"></div>
+                            <div class="speaker_details">
+                                <div class="speaker_name">Pastor Mrs. Hettie Ogbe</div>
+                                <div class="speaker_tag">Gospel Artiste/Minister</div>
+                                Henrietta Nwanefulu Ogbe is an accomplished gospel artiste, prophetess, astute administrator and minister of the gospel of our Lord Jesus Christ.
+                                <br/><br/>
+                                She is the better-half of the founder of Young Disciples International; Pastor Joe Jesimiel-Ogbe, and co-host of the Camp Joseph annual youth retreat.
+                            </div>
+                        </div>
+                        <br/><br/>
+                        <div class="section">
+                            <div class="speaker_img joe"></div>
+                            <div class="speaker_details">
+                                <div class="speaker_name">Pastor Joe Jesimiel-Ogbe</div>
+                                <div class="speaker_tag">Pastor And Youth Mentor</div>
+                                Joe Jesimiel Ogbe is a prolific author, Youth Minister, Educationist, and Senior Pastor at Greathouse Mandate Church, Lagos, Nigeria.
+                                <br/><br/>
+                                He is the Founder/ President of Young Disciples International (YDI), a non-denominational and non-governmental Christian youth Ministry committed to raising godly successor leaders.                            </div>
+                        </div>
+                        <br/><br/>
+                        <div class="section">
+                            <div class="speaker_img temi"></div>
+                            <div class="speaker_details">
+                                <div class="speaker_name">Temitayo Bukoye</div>
+                                <div class="speaker_tag">Chartered Arbitrator and Chartered Secretary and Administrator</div>
+                                Temitayo Bukoye was one of the 8 young Nigerians to have come out of the Nigerian Law School with a First-Class degree in 2015. She graduated top of her class from the Class of 2014 at the Babcock University School of Law and Security Studies, having qualified as a Chartered Arbitrator and Chartered Secretary and Administrator with distinctions. Tayo has since been attached to the corporate commercial department of the law firm of G. Elias & Co, one of the top tier law firms in Nigeria and has been recognized for several awards for her academic prowess and service to humanity. She likes to read, travel and listen to music in her pass time. She will be speaking Grades, Purpose and Abilities (GPA): Striking a balance for Academic Heights
+                            </div>
+                        </div>
+                                <br/><br/>
+                        <div class="section">
+                            <div class="speaker_img dayo"></div>
+                            <div class="speaker_details">
+                                <div class="speaker_name">Dayo Nigeria</div>
+                                <div class="speaker_tag">COMMUNITY DEVELOPENT ADVOCATE AND LEADERSHIP COACH</div>
+                                Adedayo holds a Bachelor of Arts in English Literature from Obafemi Awolowo University and he has authored 3 books on leadership development and written numerous unpublished poems.
+He was recognized as one of the 1,000 outstanding young leaders committed to impacting the continent from Sub-Saharan Africa and was selected to participate in Mandela Washington Fellowship for Young African Leaders Initiative started off by the former US President, Barack Obama.Adedayo trained as a civic leader at the Staley School of Leadership Studies, Kansas State University and runs a Leadership Clinic in 4 Nigerian States among many other leadership sessions he facilitates across the country.</div>
+                        </div>
+                        <br/><br/>
+                        <div class="section">
+                            <div class="speaker_img suwa"></div>
+                            <div class="speaker_details">
+                                <div class="speaker_name">Adekunbi Adeoye</div>
+                                <div class="speaker_tag">ED of SESEWA</div>
+                                Kunbi is the executive director of SESEWA; a company she founded while still in university in 2009. She holds an LLB from Obafemi Awolowo University and was enrolled as a solicitor and advocate of the Supreme Court of Nigeria in 2010. Her company, SESEWA is at the forefront of providing internship and career opportunities for Nigeria's young generation and she is building a legacy for internship businesses in Nigeria. Adekunbi is a frequent speaker at youth events, and a big inspiration for young people in Africa. Upon completion of the Mandela Washington Fellowship, she hopes to expand SESEWA programs across several states in Nigeria and beyond to neighboring cities in Africa.
+                        </div>
+                        <br/><br/>
+                        <div class="section">
+                            <a href="{{ url('/register')}}" class="button">Register for CJ 2017</a>
+                        </div>
+
+
+
             </div>
 
 
@@ -132,7 +236,11 @@
         var full_data_height_c = "data-" + (windowHeight + 300 + 500);
 
         var more_full_data_height_c = "data-" + (windowHeight + 300 + 880);
-    
+
+        var even_more_full_data_height_c = "data-" + (windowHeight + 300 + 1380);
+
+        var real_more_full_data_height_c = "data-" + (windowHeight + 300 + 1420);
+
         var data_width = $(".bad_guy").innerWidth();
 
         var xc = halfWindowHeight + 300;
@@ -161,6 +269,14 @@
         $(".gallery").attr(full_data_height_c, "transform: translate(0px);");more_full_data_height_c
         $(".gallery").attr(more_full_data_height_c, "transform: translate(-4200px);");
 
+        $(".camp_details").attr(even_more_full_data_height_c, "opacity:0;");
+        $(".camp_details").attr(real_more_full_data_height_c, "opacity:1;");
+
+        $(".talk_about").attr(even_more_full_data_height_c, "opacity:1;");
+        $(".talk_about").attr(real_more_full_data_height_c, "opacity:0;");
+
+        $(".churchhill").attr(even_more_full_data_height_c, "opacity:1;");
+        $(".churchhill").attr(real_more_full_data_height_c, "opacity:0;");
         //$(".bio_bounce").attr(data_height, "margin-top:-600px;opacity:0.3");
         //$(".bio_bounce_reverse").attr(data_height, "margin-top:600px;opacity:0.3");
 
