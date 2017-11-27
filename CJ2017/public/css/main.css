@@ -247,7 +247,7 @@ html, body {
     position: fixed;
     right: 25px;
     top: 20px;
-    z-index: 1;
+    z-index: 9999;
 }
 
 .button{
@@ -278,7 +278,7 @@ html, body {
 
 .atiku{
     background-color: #fff;
-    padding: 10px 15px;
+    padding: 6px 20px;
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -327,6 +327,60 @@ html, body {
     color: #fff;
     text-decoration: underline;
     
+}
+
+.speaker_img{
+    width: 180px;
+    margin-right: 20px;
+    height: 180px;
+    background-position: top;
+    background-size: cover;
+    float: left;
+}
+
+.hettie{
+    background-image: url('../images/hettie-ogbe-camp-joseph.jpg');
+}
+
+.joe{
+    background-image: url('../images/Optimized-Pastor-Joe-Jesimiel.jpg');
+}
+
+.dayo{
+    background-image: url('../images/Dayo-Nigeria-Camp-Joseph-2017.jpg');
+}
+
+.temi{
+    background-image: url('../images/Temitoye-Bukoye-Camp-Joseph-2017.jpg');
+}
+
+.sam{
+    background-image: url('../images/sam.jpg');
+}
+
+.suwa{
+    background-image: url('../images/suwa.jpg');
+}
+
+.speaker_name{
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #fff;
+    padding: 6px 20px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.speaker_tag{
+    font-weight: bold;
+}
+
+.speaker_details{
+    overflow: hidden;
 }
 
 .camp_details{
