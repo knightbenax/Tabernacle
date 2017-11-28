@@ -29,12 +29,34 @@
 
 /* Space out content a bit */
 body {
-  background-image: url('../images/_MD05755.jpg');
+  background-image: url('../../images/md05755.jpg');
   background-size: cover;
   background-position: center;
   background-color: #344C18;
   font-family: Lato;
   margin: 0px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #ddd;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color:    #ddd;
+ opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ color:    #ddd;
+ opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color:    #ddd;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+ color:    #ddd;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+ color:    #ddd;
 }
 
 *{
@@ -71,7 +93,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: RGB(52, 76, 24, 0.99);;
+  background-color: rgba(95, 120, 1, 0.95);
 }
 
 .title{
@@ -165,7 +187,7 @@ body {
   background: transparent;
   border: 0;
   outline: 0;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #bababa;
   padding-bottom: 6px;
   width: 100%;
   margin-bottom: 30px;
@@ -176,7 +198,7 @@ body {
   border: 0;
   outline: 0;
   outline: none;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #bababa;
   padding-bottom: 6px;
   width: 100%;
   resize: none;
