@@ -1,0 +1,707 @@
+@media (min-width: 1920px) { 
+    .top .slide.one {
+        margin-left: -220px !important;
+        width: 35% !important;
+        max-width: 540px !important;
+    }
+
+    .top .slide.four {
+        margin-right: -220px !important;
+        width: 33% !important;
+        /* width: 500px; */
+    }
+
+    .top .slide{
+        width: 34% !important;
+    }
+}
+
+@media (min-width: 1580px) { /*768*/
+    .top .slide.two .bad_guy::before{
+        background-image: url('../images/md06047_large.jpg') !important;
+    }
+
+    .top .slide.two .bad_guy_two::before{
+        background-image: url('../images/md05665_large.jpg') !important;
+    }
+
+    .top .slide.three .bad_guy::before{
+        background-image: url('../images/md05755_large.jpg') !important;
+    }
+
+    .top .slide.three .bad_guy_two::before{
+        background-image: url('../images/md05952_large.jpg') !important;
+    }
+
+    .top .slide.four .bad_guy::before{
+        background-image: url('../images/md05804_large.jpg') !important;
+    }
+
+    .top .slide.four .bad_guy_two::before{
+        background-image: url('../images/md05779_large.jpg') !important;
+    }
+
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 1.25), 
+(min-resolution: 120dpi){ 
+    /* Retina-specific stuff here */
+    .top .slide.two .bad_guy::before{
+        background-image: url('../images/md06047_large.jpg');
+    }
+    
+}
+
+/* 1.3 dpr */
+@media 
+(-webkit-min-device-pixel-ratio: 1.3), 
+(min-resolution: 124.8dpi){ 
+    /* Retina-specific stuff here */
+    .top .slide.two .bad_guy::before{
+        background-image: url('../images/md06047_large.jpg');
+    }
+}
+
+/* 1.5 dpr */
+@media 
+(-webkit-min-device-pixel-ratio: 1.5), 
+(min-resolution: 144dpi){ 
+    /* Retina-specific stuff here */
+    .top .slide.two .bad_guy::before{
+        background-image: url('../images/md06047_large.jpg');
+    }
+}
+
+/*iPad only*/
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+    .top .slide.two .bad_guy_two::before {
+        background-image: url(../images/md05665.jpg);
+        left: -90%;
+        width: 180%;
+        top: 0px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-size: 290%;
+        background-position: center;
+        transform-origin: right bottom;
+        transform: rotate(15deg);
+    }
+
+    .top .slide.two .bad_guy::before {
+        background-image: url(../images/md06048.jpg);
+        left: -90%;
+        width: 180%;
+        top: 0px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-size: 290%;
+        background-position: -550px 230px;
+        transform-origin: right bottom;
+        transform: rotate(15deg);
+    }
+
+    .top .slide.four .bad_guy_two::before {
+        background-image: url(../images/md05779.jpg);
+        left: -90%;
+        width: 180%;
+        top: 0px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-size: cover;
+        background-position: -310px 150px;
+        transform-origin: right bottom;
+        transform: rotate(15deg);
+  
+    }
+
+    .big_header .title, .big_header .sec_title{
+        font-size: 60px;
+    }
+
+    .top .slide.four .bad_guy::before {
+        background-image: url(../images/md05804.jpg);
+        left: -90%;
+        width: 180%;
+        top: 0px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-size: cover;
+        background-position: -260px 150px;
+        transform-origin: right bottom;
+        transform: rotate(15deg);
+    }
+}
+
+@media (min-width: 1400px) { /*768*/
+    html, body {
+        /*background-color: #08511f;*/
+        background-color: #5f7801;
+        color: #fff;
+        font-family: 'Cabin', sans-serif;    
+        font-weight: 100;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .large_guy{
+        font-family: 'Passion One', cursive;
+    }
+
+    .top {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .tagline{
+        font-family: 'Changa One', cursive;
+        font-size: 35px;
+        margin-bottom: 3px;
+    }
+
+    .sub{
+        font-size: 12px;
+        display: block;
+    }
+
+    .big_header{
+        position: fixed;
+        z-index: 5;
+        height: 100vh;
+        max-width: 400px;
+        width: 30%;
+        left: 0px;
+        top: 0px;
+        text-align: right;
+        display: flex;
+        /*align-items: right;*/
+        justify-content: center;
+        line-height: 0.95;
+        flex-direction: column;
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.6),
+        0px 8px 13px rgba(0,0,0,0.5),
+        0px 18px 23px rgba(0,0,0,0.5);
+    }
+
+    #big_header_second{
+        width: 35%;
+        max-width: 430px;
+    }
+
+    .big_header .title, .big_header .sec_title{
+        font-size: 80px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .big_header .subtitle, .big_header .sec_subtitle{
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        padding-right: 10px;
+        font-weight: bold;
+        line-height: 1.3;
+    }
+
+    .big_header .subtitle.small{
+        font-size: 25px;
+        text-transform: none;
+        margin-bottom: 10px;
+        padding-right: 10px;
+        font-weight: bold;
+        line-height: 1.3;
+    }
+
+
+
+    .slide_container{
+        display: flex;
+        width: 100%;
+        position: fixed;
+    }
+
+    .top .slide{
+        /*position: relative;*/
+        z-index: 4;
+        /*background: #366301;*/
+        bottom: 0px;
+        left: -530px;
+        /*transform-origin: right bottom;*/
+        transform: rotate(344deg);
+        width: 31%;
+        height: 150vh;
+        top: -180px;
+        overflow: hidden;
+        border: 8px solid #fff;
+    }
+
+    .top .slide.one{
+        margin-left: -180px;
+        width: 35%;
+        max-width: 480px;
+    }
+
+    .top .slide.two .bad_guy, .top .slide.two .bad_guy_two{
+        z-index: 4;
+        bottom: 0px;
+        left: 0px;
+        top: 0px;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .top .slide.two .bad_guy::before{
+        background-image: url('../images/md06048.jpg');
+        left: -90%;
+        width: 180%;
+        top: 0px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-size: cover;
+        background-position: center 130px;
+        transform-origin: right bottom;
+        transform: rotate(15deg);
+    }
+
+    .top .slide.two .bad_guy_two::before{
+        background-image: url('../images/md05665.jpg');
+        left: -90%;
+        width: 180%;
+        top: 0px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-size: 205%;
+        background-position: -440px center;
+        transform-origin: right bottom;
+        transform: rotate(15deg);
+    }
+
+    .top .slide.three .bad_guy, .top .slide.three .bad_guy_two{
+        z-index: 4;
+        bottom: 0px;
+        left: 0px;
+        top: 0px;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .top .slide.three .bad_guy::before{
+        background-image: url('../images/md05755.jpg');
+        left: -90%;
+        width: 180%;
+        top: 0px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-size: 100%;
+        background-position: center 90px;
+        transform-origin: right bottom;
+        transform: rotate(15deg);
+    }
+
+    .top .slide.three .bad_guy_two::before{
+        background-image: url('../images/md05949.jpg');
+        left: -90%;
+        width: 180%;
+        top: 0px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-size: 100%;
+        background-position: center -90px;
+        transform-origin: right bottom;
+        transform: rotate(15deg);
+    }
+
+    .top .slide.four{
+        margin-right: -160px;
+        width: 32%;
+        /*width: 500px;*/
+    }
+
+    .top .slide.four .bad_guy, .top .slide.four .bad_guy_two{
+        z-index: 4;
+        bottom: 0px;
+        left: 0px;
+        top: 0px;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .top .slide.four .bad_guy::before{
+        background-image: url('../images/md05804.jpg');
+        left: -90%;
+        width: 180%;
+        top: 0px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-size: cover;
+        background-position: center 220px;
+        transform-origin: right bottom;
+        transform: rotate(15deg);
+    }
+
+    .top .slide.four .bad_guy_two::before{
+        background-image: url('../images/md05779.jpg');
+        left: -90%;
+        width: 180%;
+        top: 0px;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-size: cover;
+        background-position: -150px 150px;
+        transform-origin: right bottom;
+        transform: rotate(15deg);
+    }
+
+    .logo{
+        position: fixed;
+        left: 25px;
+        top: 20px;
+        width: 55px;
+        z-index: 6;
+    }
+
+    .churchhill{
+        position: fixed;
+        left: 25px;
+        bottom: 20px;
+        z-index: 6;
+    }
+
+    .register{
+        position: fixed;
+        right: 25px;
+        top: 20px;
+        z-index: 9999;
+    }
+
+    .button{
+        text-decoration: none;
+        background-color: #fff;
+        padding: 10px 25px;
+        border-radius: 3px;
+        line-height: normal;
+        display: inline-block;
+        -webkit-box-shadow: 0 7px 15px rgba(0,0,0,.6);
+        box-shadow: 0 7px 15px rgba(0,0,0,.6);
+        -moz-box-shadow: 0 7px 15px rgba(0,0,0,.6);
+        color: #000;
+        font-weight: bold;
+    }
+
+    .details{
+        margin: 100px auto 80px !important;
+        
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        background-color: #5f7801;
+        -webkit-box-shadow: 0 0px 7px rgba(0,0,0,.6);
+        box-shadow: 0 0px 7px rgba(0,0,0,.6);
+        -moz-box-shadow: 0 0px 7px rgba(0,0,0,.6);
+    }
+
+    .atiku{
+        background-color: #fff;
+        padding: 6px 20px;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        color: #5f7801;
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .details_title{
+        position: relative;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        background-position: center;
+        background-size: cover;    
+        background-image: url('../images/CJ78.jpeg');
+        font-size: 35px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .details_title .overlay{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        content: '';
+        background-color: rgba(0,0,0,.6);
+    }
+
+    .details_title span{
+        z-index: 4;
+        position: relative;
+    }
+
+    .section{
+        margin: 20px;
+        line-height: 1.8;
+    }
+
+
+    .section a.button{
+        color: #000 !important;
+        font-size: 30px !important;
+        text-align: center;
+        text-decoration: none;
+    }
+
+
+    .section a{
+        color: #fff;
+        text-decoration: underline;
+        
+    }
+
+
+    .speaker_img{
+        width: 180px;
+        margin-right: 20px;
+        height: 180px;
+        background-position: top;
+        background-size: cover;
+        float: left;
+    }
+
+    .hettie{
+        background-image: url('../images/hettie-ogbe-camp-joseph.jpg');
+    }
+
+    .joe{
+        background-image: url('../images/Optimized-Pastor-Joe-Jesimiel.jpg');
+    }
+
+    .dayo{
+        background-image: url('../images/Dayo-Nigeria-Camp-Joseph-2017.jpg');
+    }
+
+    .temi{
+        background-image: url('../images/Temitoye-Bukoye-Camp-Joseph-2017.jpg');
+    }
+
+    .sam{
+        background-image: url('../images/sam.jpg');
+    }
+
+    .suwa{
+        background-image: url('../images/suwa.jpg');
+    }
+
+    .speaker_name{
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #fff;
+        padding: 6px 20px;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 8px;
+        color: #000;
+    }
+
+    .speaker_tag{
+        font-weight: bold;
+    }
+
+    .speaker_details{
+        overflow: hidden;
+    }
+
+    .camp_details{
+        overflow-y: auto;
+    }
+
+    .talk_about, .camp_details{
+        position: fixed;
+        top: 0px;
+        left:0px;
+        bottom: 0px;
+        right: 0px;
+        /*z-index: 999;*/
+    }
+
+    .first_take{
+        position: absolute;
+        top: 0px;
+        left:0px;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    .show{
+        background-size: cover;
+        background-position: center;
+        width: 520px;
+        height: 420px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -webkit-box-shadow: 0 7px 15px rgba(0,0,0,.6);
+        box-shadow: 0 7px 15px rgba(0,0,0,.6);
+        -moz-box-shadow: 0 7px 15px rgba(0,0,0,.6);
+        margin-right: 35px;
+        display: inline-block;
+    }
+
+    .first_image{
+        background-image: url('../images/CJ54.jpeg');
+    }
+
+    .second_image{
+        background-image: url('../images/cj39.jpeg');
+    }
+
+    .third_image{
+        background-image: url('../images/CJ85.jpeg');
+    }
+
+    .four_image{
+        background-image: url('../images/CJ071.jpeg');
+    }
+
+    .five_image{
+        background-image: url('../images/CJ055.jpeg');
+    }
+
+    .six_image{
+        background-image: url('../images/CJ50.jpeg');
+    }
+
+    .seven_image{
+        background-image: url('../images/cj33.jpeg');
+    }
+
+    .eight_image{
+        background-image: url('../images/CJ75.jpeg');
+    }
+
+    .nine_image{
+        background-image: url('../images/CJ103.jpeg');
+    }
+
+    .ten_image{
+        background-image: url('../images/CJ78.jpeg');
+    }
+
+    .tell{
+        text-align: center;
+    }
+
+    .yellow{
+        color: #F5B901;
+        text-decoration: underline;
+    }
+
+    .black{
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .enlarged_green{
+        color: #97BE01;
+    }
+
+    .green{
+        color: rgb(6, 164, 255);
+        text-decoration: underline;
+    }
+
+    .experience{
+        font-size: 40px;
+    }
+
+    .gallery{
+        white-space: nowrap;
+        padding: 100px 0px 40px 70px;
+    }
+
+    .sliver.text{
+        max-width: 1000px;
+        padding-bottom: 40px;
+    }
+
+    .sliver{
+        width: 80%;
+        margin: auto;
+        max-width: 900px;
+    }
+
+    .logo img{
+        width: 100%;
+    }
+
+    .full-height {
+        height: 100vh;
+        
+        background-size: cover;
+        background-position: center;
+    }
+
+    .flex-center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .position-ref {
+        position: relative;
+    }
+
+    .top-right {
+        position: absolute;
+        right: 10px;
+        top: 18px;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 84px;
+    }
+
+    .links > a {
+        color: #636b6f;
+        padding: 0 25px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .m-b-md {
+        margin-bottom: 30px;
+    }
+
+}

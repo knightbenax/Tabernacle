@@ -116,28 +116,28 @@ html, body {
 
 .top .slide.two .bad_guy::before{
     background-image: url('../images/md06048.jpg');
-    left: -270px;
+    left: -90%;
     width: 180%;
     top: 0px;
     height: 100%;
     content: '';
     position: absolute;
     background-size: 190%;
-    background-position: -340px 200px;
+    background-position: center 230px;
     transform-origin: right bottom;
     transform: rotate(15deg);
 }
 
 .top .slide.two .bad_guy_two::before{
     background-image: url('../images/md05665.jpg');
-    left: -270px;
+    left: -90%;
     width: 180%;
     top: 0px;
     height: 100%;
     content: '';
     position: absolute;
     background-size: 205%;
-    background-position: center;
+    background-position: -290px center;
     transform-origin: right bottom;
     transform: rotate(15deg);
 }
@@ -156,7 +156,7 @@ html, body {
 
 .top .slide.three .bad_guy::before{
     background-image: url('../images/md05755.jpg');
-    left: -270px;
+    left: -90%;
     width: 180%;
     top: 0px;
     height: 100%;
@@ -170,7 +170,7 @@ html, body {
 
 .top .slide.three .bad_guy_two::before{
     background-image: url('../images/md05949.jpg');
-    left: -270px;
+    left: -90%;
     width: 180%;
     top: 0px;
     height: 100%;
@@ -202,28 +202,28 @@ html, body {
 
 .top .slide.four .bad_guy::before{
     background-image: url('../images/md05804.jpg');
-    left: -420px;
+    left: -90%;
     width: 180%;
     top: 0px;
     height: 100%;
     content: '';
     position: absolute;
     background-size: cover;
-    background-position: center 150px;
+    background-position: -100px 150px;
     transform-origin: right bottom;
     transform: rotate(15deg);
 }
 
 .top .slide.four .bad_guy_two::before{
     background-image: url('../images/md05779.jpg');
-    left: -420px;
+    left: -90%;
     width: 180%;
     top: 0px;
     height: 100%;
     content: '';
     position: absolute;
     background-size: cover;
-    background-position: -60px 150px;
+    background-position: -150px 150px;
     transform-origin: right bottom;
     transform: rotate(15deg);
 }
