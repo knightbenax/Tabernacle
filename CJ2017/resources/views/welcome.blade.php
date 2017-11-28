@@ -238,8 +238,10 @@ He was recognized as one of the 1,000 outstanding young leaders committed to imp
         var more_full_data_height_c = "data-" + (windowHeight + 300 + 880);
 
         var even_more_full_data_height_c = "data-" + (windowHeight + 300 + 1380);
+        var even_more_full_data_height_d = "data-" + (windowHeight + 300 + 1400);
 
-        var real_more_full_data_height_c = "data-" + (windowHeight + 300 + 1420);
+        var real_more_full_data_height_c = "data-" + (windowHeight + 300 + 1415);
+        var real_more_full_data_height_d = "data-" + (windowHeight + 300 + 1425);
 
         var data_width = $(".bad_guy").innerWidth();
 
@@ -252,31 +254,34 @@ He was recognized as one of the 1,000 outstanding young leaders committed to imp
         $(".slide .bad_guy_two").attr(data_height, "left:0px;opacity:1");
         $(".slide .bad_guy").attr(data_height, "left:-" + data_width + "px;opacity:0");
 
-        $("#big_header").attr("data-0", "opacity:1; transform: translate(0px);");
+        $("#big_header").attr("data-0", "opacity:1; transform: translate(0px);z-index:100");
         $("#big_header").attr(data_height, "opacity:0; transform: translate(-100%);");
 
-        $("#big_header_second").attr("data-0", "opacity:0; transform: translate(-100%);");
+        $("#big_header_second").attr("data-0", "opacity:0; transform: translate(-100%);z-index:100");
         $("#big_header_second").attr(data_height, "opacity:1; transform: translate(0px);");
 
-        $(".slide_container").attr("data-" + xc, "opacity:1; transform: translate(0px, 0px);");
-        $(".slide_container").attr(full_data_height, "opacity:0; transform: translate(1500px, 0px);");
+        $(".slide_container").attr("data-" + xc, "opacity:1; transform: translate(0px, 0px);display:flex;z-index:99");
+        $(".slide_container").attr(full_data_height, "opacity:0; transform: translate(1500px, 0px);display:none;z-index:0");
 
-        $(".talk_about").attr("data-" + xc, "opacity:0;");
-        $(".talk_about").attr(full_data_height, "opacity:1;");
+        $(".talk_about").attr("data-" + xc, "opacity:0;z-index:0");
+        $(".talk_about").attr(full_data_height, "opacity:1;z-index:99");
 
         $("#big_header_second").attr(full_data_height, "opacity:0;");
 
         $(".gallery").attr(full_data_height_c, "transform: translate(0px);");more_full_data_height_c
         $(".gallery").attr(more_full_data_height_c, "transform: translate(-4200px);");
 
-        $(".camp_details").attr(even_more_full_data_height_c, "opacity:0;");
-        $(".camp_details").attr(real_more_full_data_height_c, "opacity:1;");
+        $("#big_header").attr(more_full_data_height_c, "z-index:0");
+        $("#big_header_second").attr(more_full_data_height_c, "z-index:0");
 
-        $(".talk_about").attr(even_more_full_data_height_c, "opacity:1;");
-        $(".talk_about").attr(real_more_full_data_height_c, "opacity:0;");
+        $(".talk_about").attr(even_more_full_data_height_c, "opacity:1;z-index:99");
+        $(".talk_about").attr(real_more_full_data_height_c, "opacity:0;z-index:0");
 
-        $(".churchhill").attr(even_more_full_data_height_c, "opacity:1;");
-        $(".churchhill").attr(real_more_full_data_height_c, "opacity:0;");
+        $(".camp_details").attr(even_more_full_data_height_d, "opacity:0;z-index:0");
+        $(".camp_details").attr(real_more_full_data_height_d, "opacity:1;z-index:99");
+
+        $(".churchhill").attr(even_more_full_data_height_c, "opacity:1;z-index:99");
+        $(".churchhill").attr(real_more_full_data_height_c, "opacity:0;z-index:0");
         //$(".bio_bounce").attr(data_height, "margin-top:-600px;opacity:0.3");
         //$(".bio_bounce_reverse").attr(data_height, "margin-top:600px;opacity:0.3");
 

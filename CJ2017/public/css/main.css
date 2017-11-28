@@ -38,7 +38,7 @@ html, body {
     top: 0px;
     text-align: right;
     display: flex;
-    align-items: right;
+    /*align-items: right;*/
     justify-content: center;
     line-height: 0.95;
     flex-direction: column;
@@ -115,7 +115,7 @@ html, body {
 }
 
 .top .slide.two .bad_guy::before{
-    background-image: url('../images/_MD06048.JPG');
+    background-image: url('../images/md06048.jpg');
     left: -270px;
     width: 180%;
     top: 0px;
@@ -129,7 +129,7 @@ html, body {
 }
 
 .top .slide.two .bad_guy_two::before{
-    background-image: url('../images/_MD05665.JPG');
+    background-image: url('../images/md05665.jpg');
     left: -270px;
     width: 180%;
     top: 0px;
@@ -155,7 +155,7 @@ html, body {
 
 
 .top .slide.three .bad_guy::before{
-    background-image: url('../images/_MD05755.JPG');
+    background-image: url('../images/md05755.jpg');
     left: -270px;
     width: 180%;
     top: 0px;
@@ -169,7 +169,7 @@ html, body {
 }
 
 .top .slide.three .bad_guy_two::before{
-    background-image: url('../images/_MD05949.JPG');
+    background-image: url('../images/md05949.jpg');
     left: -270px;
     width: 180%;
     top: 0px;
@@ -201,7 +201,7 @@ html, body {
 
 
 .top .slide.four .bad_guy::before{
-    background-image: url('../images/_MD05804.JPG');
+    background-image: url('../images/md05804.jpg');
     left: -420px;
     width: 180%;
     top: 0px;
@@ -215,7 +215,7 @@ html, body {
 }
 
 .top .slide.four .bad_guy_two::before{
-    background-image: url('../images/_MD05779.JPG');
+    background-image: url('../images/md05779.jpg');
     left: -420px;
     width: 180%;
     top: 0px;
@@ -403,7 +403,7 @@ html, body {
     left:0px;
     bottom: 0px;
     right: 0px;
-    z-index: 999;
+    /*z-index: 999;*/
 }
 
 .first_take{
@@ -503,7 +503,7 @@ html, body {
 
 .sliver.text{
     max-width: 600px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .sliver{
