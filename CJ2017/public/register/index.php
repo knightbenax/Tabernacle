@@ -16,7 +16,7 @@
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="Camp Joseph 2017 Registration" />
 	  <meta property="og:description"   content="Register for Camp Joseph 2016" />
-	  <meta property="og:image"         content="http://campjoseph.ydiworld.org/avatar/img/register-min.png" />
+	  <meta property="og:image"         content="http://campjoseph.ydiworld.org/images/md05755_large.jpg" />
     <meta property="og:image:height"  content="3649" />
     <meta property="og:image:width"  content="3217" />
 
@@ -27,7 +27,7 @@
     <meta name="twitter:description" id="desc" content="Register for Camp Joseph 2016">
     <meta name="twitter:text:title" id="title" content="Camp Joseph 2016 Registration">
     <meta name="twitter:text:description" id="desc" content="Register for Camp Joseph 2016">
-    <meta name="twitter:image" id="image" content="http://campjoseph.ydiworld.org/avatar/img/register-min.png">
+    <meta name="twitter:image" id="image" content="http://campjoseph.ydiworld.org/images/md05755_large.jpg">
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
