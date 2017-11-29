@@ -7,6 +7,32 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <meta name="description" content="Camp Joseph 2017 Registration App" />
+    <meta name="author" content="Ashefor Bezaleel" />
+    <meta name="keywords" content="young-disciples-international, ashefor, bez, ydi, camp-joseph, 2017, registration" />
+    <!--<meta name="viewport" content="width=device-width">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+    <meta property="fb:app_id"           content="874278422590799" />
+
+    <meta property="og:url"           content="http://campjoseph.ydiworld.org/" />
+	  <meta property="og:type"          content="website" />
+	  <meta property="og:title"         content="Camp Joseph 2017 Registration" />
+	  <meta property="og:description"   content="Register for Camp Joseph 2016" />
+	  <meta property="og:image"         content="http://campjoseph.ydiworld.org/images/md05755_large.jpg" />
+    <meta property="og:image:height"  content="3649" />
+    <meta property="og:image:width"  content="3217" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@officialydi">
+    <meta name="twitter:creator" content="@officialydi">
+    <meta name="twitter:title" id="title" content="Camp Joseph 2016 Registration">
+    <meta name="twitter:description" id="desc" content="Register for Camp Joseph 2016">
+    <meta name="twitter:text:title" id="title" content="Camp Joseph 2016 Registration">
+    <meta name="twitter:text:description" id="desc" content="Register for Camp Joseph 2016">
+    <meta name="twitter:image" id="image" content="http://campjoseph.ydiworld.org/images/md05755_large.jpg">
+
+
         <title>CJ 2017 - Enlargement</title>
 
         <!-- Fonts -->
@@ -15,6 +41,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}"  />
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/big.css') }}"  />
 
         <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('/images/apple-icon-57x57.png')}}">
         <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('/images/apple-icon-60x60.png')}}">
