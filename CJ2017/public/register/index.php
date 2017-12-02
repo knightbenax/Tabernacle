@@ -15,7 +15,7 @@
     <meta property="og:url"           content="http://campjoseph.ydiworld.org/" />
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="Camp Joseph 2017 Registration" />
-	  <meta property="og:description"   content="Register for Camp Joseph 2016" />
+	  <meta property="og:description"   content="Register for Camp Joseph 2017" />
 	  <meta property="og:image"         content="http://campjoseph.ydiworld.org/images/md05755_large.jpg" />
     <meta property="og:image:height"  content="3649" />
     <meta property="og:image:width"  content="3217" />
