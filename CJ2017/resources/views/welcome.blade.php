@@ -72,7 +72,7 @@
             </div>
 
             <div class="churchhill">
-                <div class="subtitle tagline" >Enlargement<span class="sub">(17th Edition)</span></div>
+                <div class="subtitle tagline" >Enlargement<span class="sub">(18th Edition)</span></div>
                 <div class="subtitle small">Dec 27th - 30th 2017</div>
                 <div class="subtitle small">Faith Academy Canaanland, Ota</div>
             </div>
