@@ -1,4 +1,4 @@
-# Camp-Joseph-Web-Apps-Suite
+# Tabernacle
 
 [![Knightbenax Approved](http://ephodng.com/knightbenax-badge.svg)](https://twitter.com/knightbenax)
 
