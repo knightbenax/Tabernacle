@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
 use DB;
 use App;
 
@@ -30,6 +30,10 @@ class RegisterController extends Controller
         $new_parti->save();
     
         return Response::json(array('success' => true, 'last_insert_id' => $new_parti->id), 200);
+
+    }
+
+    public function getParticipantData(){
 
     }
 

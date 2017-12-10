@@ -15,8 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/register/new', 'RegisterController@newParticipantData');
-
-Route::get('/register/participant', 'RegisterController@getParticipantData');
-
 
