@@ -93,12 +93,12 @@ $domain = "campjoseph.ydiworld.org";
 
 # Make the call to the client.
 $result = $mgClient->sendMessage($domain, array(
-    'from'    => 'YDi Invitation Patrol Team <malak@campjoseph.ydiworld.org>',
+    'from'    => 'YDi (Young Disciples International)<malak@campjoseph.ydiworld.org>',
     'to'      => $text3,
     //'cc'      => 'baz@example.com',
     //'bcc'     => 'bar@example.com',
-    'subject' => 'Your Camp Joseph 2016 Invite',
-    'text'    => 'This is your Camp Joseph 2016 Invite. Hold it close',
+    'subject' => 'Your Camp Joseph 2017 Invite',
+    'text'    => 'This is your Camp Joseph 2017 Invitation. Hold it close',
     'html'    => $html//'<html>HTML version of the body</html>'
 )/*, array(
     'attachment' => array('/path/to/file.txt', '/path/to/file.txt')
