@@ -14,7 +14,8 @@ return [
     */
 
     //'default' => env('DB_CONNECTION', 'mysql'),
-    'default' => 'mysql_local',
+    //'default' => 'mysql_utiware',
+    'default' => 'mysql_utiware',
 
     /*
     |--------------------------------------------------------------------------
@@ -57,11 +58,11 @@ return [
 
         'mysql_utiware' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'pmvnmqudpv'),
-            'username' => env('DB_USERNAME', 'pmvnmqudpv'),
-            'password' => env('DB_PASSWORD', 'Wn7sS9cmgn'),
+            'database' => env('DB_DATABASE', 'pzliejvn_ydiworld'),
+            'username' => env('DB_USERNAME', 'pzliejvn_root'),
+            'password' => env('DB_PASSWORD', 'kg188KzZ2n'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
