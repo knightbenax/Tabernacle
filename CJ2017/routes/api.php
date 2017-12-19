@@ -19,4 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/register/new', 'RegisterController@newParticipantData');
 
-Route::get('/register/participant', 'RegisterController@getParticipantData');
+Route::post('/register/participant', 'RegisterController@getParticipantData');
+
+Route::post('/register/details', 'RegisterController@getEventsData');
