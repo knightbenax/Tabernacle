@@ -41,49 +41,39 @@
             <table style="border-collapse:collapse !important;margin: 0 auto;" cellpadding="0" cellspacing="0" width="600" class="w320">
               <tr>
                 <td align="center" valign="top" style="font-family:'Lato', Helvetica, Arial, sans-serif;font-weight:400;text-align:center;">
-                  <table style="border-collapse:collapse !important;width:100% !important;margin: 0 auto;" cellpadding="0" cellspacing="0" class="force-full-width" bgcolor="#8dd23e">
+                  <table style="border-collapse:collapse !important;width:100% !important;margin: 0 auto;" cellpadding="0" cellspacing="0" class="force-full-width" bgcolor="#5f7801">
                     <tr>
                       <td style="font-family:'Lato', Helvetica, Arial, sans-serif;font-weight:400;text-align:center;">
-                        <img src="http://campjoseph.ydiworld.org/images/email_invite_crop-min.png" width="600" height="531" alt="invite picture" style="max-width:600px;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;">
+                        <img src="http://campjoseph.ydiworld.org/register/images/feature.jpg" width="600" height="293" alt="invite picture" style="max-width:600px;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;">
                       </td>
                     </tr>
                   </table>
-                  <table style="border-collapse:collapse !important;width:100% !important;margin: 0 auto;" cellpadding="0" cellspacing="0" class="force-full-width" bgcolor="#8dd23e">
+                  <table style="border-collapse:collapse !important;width:100% !important;margin: 0 auto;" cellpadding="0" cellspacing="0" class="force-full-width" bgcolor="#5f7801">
                     <tr>
-                      <td style="font-family:'Lato', Helvetica, Arial, sans-serif;font-weight:400;text-align:center;background-color:#8dd23e;">
+                      <td style="font-family:'Lato', Helvetica, Arial, sans-serif;font-weight:400;text-align:center;background-color:#5f7801;">
                         <center>
-                          <table style="border-collapse:collapse !important;width:90% !important;margin:0 auto;" cellspacing="0" cellpadding="0" class="force-width-80">
-                            <tr>
-                              <td style="font-family:'Lato', Helvetica, Arial, sans-serif;font-weight:400;text-align:center;text-align:left; color:#000;">
-                                <br>
-                                <span style="font-weight:bold;margin-bottom:5px;">Name</span><br>
-                                <?php echo $_GET["name"] ?>
-
-                                <br><br>
-                                <span style="font-weight:bold;margin-bottom:5px;">Phone Number</span><br>
-                                <?php echo $_GET["phone"] ?>
-
-                                <br><br>
-                                <span style="font-weight:bold;margin-bottom:5px;">Tribe</span><br>
-                                <?php echo $_GET["tribe"] ?>
-                          </td>
-                            </tr>
-                          </table>
                           <table style="border-collapse:collapse !important;width:90% !important;margin: 0 auto;" cellspacing="0" cellpadding="0" class="force-width-80">
                             <tr>
-                              <td style="font-family:'Lato', Helvetica, Arial, sans-serif;font-weight:400;text-align:center;text-align:left; color:#000;">
+                              <td style="font-family:'Lato', Helvetica, Arial, sans-serif;font-weight:400;text-align:center;text-align:left; color:#fff;line-height:1.5">
                                 <br>
                                 <br>
-                                <br>
-                                <br>
-                                Directions To Venue: From anywhere you are, take a bus to Sango Ota, take another bus to Ojuore roundabout bus-stop. Then take a final bus/vehicle/bike to Winners/Canaanland. You would be directed once you get there.
+                                Dear <?php echo $_GET["name"] ?>,
                                 <br><br>
-                                Transportation to and fro would also be available from YDi Youth-house. Uber rides and direction instructions are also avaliable from the Camp Joseph Mobile Apps.
+                                Thank you for attending Camp Joseph 2017; it was a pleasure to have you and thousands of other young successor leaders grace the event.
                                 <br><br>
-                                Shalom. We can’t wait to see you.
+                                For us, CJ 2017 was highly impactful, full of charges ranging from mentorship, followership to finding purpose, living in enlargement and praying towards same, as delivered by Pastor Joe Jesimiel Ogbe, Pastor Mrs Henrietta Ogbe, Adekunbi Adeoye, Pastor Iren Emmanuel, Bukoye Temitayo, to name a few. Explosive I tell you.
+                                <br><br>
+                                The CJ Organizing Committee 2017 do not take lightly the awareness that learning from these speakers is an avenue to employ our imagination and possibly grow another generation of youths who would be highly informed, responsible, god-fearing and relevant to God and humanity. Our aim was that everyone who attended would go back empowered, ready for growth and enlargement to fulfil the great destiny God has purposed for you in your different areas of work and influence. We totally hope that was what happened for you.
+                                <br><br>
+                                We hope you keep this communication between us open; in weeks ahead, our team will send you updates about CJ2017 through the Social media handles: @Officialydi on Instagram  and Campjoseph on Facebook. Please stay with us as we continue to anticipate even a greater time at CJ 2018!
+                                <br><br>
+                                Once again Thank You for attending CJ 2017 and hope to see an Enlarged you soon!
                                 <br>
                                 <br>
-                                <br>
+                                Best regards,
+                                <br/>
+                                CJOC 2017
+                                <br/><br/><br/>
                               </td>
                             </tr>
                           </table>
@@ -95,10 +85,10 @@
                     <tr>
                       <td style="font-family:'Lato', Helvetica, Arial, sans-serif;font-weight:400;text-align:center;color:#bbbbbb; font-size:12px;">
                         <br>
-                        <br>
+                        
                         YDi
                         <br>
-                        <br>
+                        
                       </td>
                     </tr>
                     <tr>

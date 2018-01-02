@@ -19,6 +19,8 @@ function getConnection()
 
 if(isset($_POST["Code"])){
   register();
+} else {
+    
 }
 /*function getConnection()
 {

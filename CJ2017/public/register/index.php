@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Camp Joseph 2016 Registration</title>
+    <title>Camp Joseph 2017 Registration</title>
 
     <meta name="description" content="Camp Joseph 2017 Registration App" />
     <meta name="author" content="Ashefor Bezaleel" />

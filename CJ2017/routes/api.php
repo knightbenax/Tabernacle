@@ -22,3 +22,5 @@ Route::post('/register/new', 'RegisterController@newParticipantData');
 Route::post('/register/participant', 'RegisterController@getParticipantData');
 
 Route::post('/register/details', 'RegisterController@getEventsData');
+
+Route::post('/register/markasarrived', 'RegisterController@getMarkAsArrived');

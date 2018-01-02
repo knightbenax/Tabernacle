@@ -77,7 +77,7 @@ $text3 = $_GET["text3"];
 $text0_ = urlencode($text0);
 $text2_ = urlencode($text2);
 
-$html  = file_get_contents('http://campjoseph.ydiworld.org/email.php?name=' . $text0_ . '&phone=' . $text2_ . '&tribe=' . $this_tribe);
+$html  = file_get_contents('http://campjoseph.ydiworld.org/welcome_pack.php?name=' . $text0_ . '&phone=' . $text2_ . '&tribe=' . $this_tribe);
 $mailgunApiKey = "key-835d4f7e684e51f130c623f1562e197d";
 # Instantiate the client.
 $client = new \GuzzleHttp\Client([
@@ -93,15 +93,17 @@ $domain = "campjoseph.ydiworld.org";
 
 # Make the call to the client.
 $result = $mgClient->sendMessage($domain, array(
-    'from'    => 'YDi <malak@campjoseph.ydiworld.org>',
+    'from'    => 'YDi (Young Disciples International)<malak@campjoseph.ydiworld.org>',
     'to'      => $text3,
     //'cc'      => 'baz@example.com',
     //'bcc'     => 'bar@example.com',
-    'subject' => 'Your Camp Joseph 2017 Welcome Details',
-    'text'    => 'Welcome to Camp Joseph 2017. We appreciated you',
+    'subject' => 'Welcome to Camp Joseph 2017',
+    'text'    => 'Welcome to Camp Joseph 2017',
     'html'    => $html//'<html>HTML version of the body</html>'
 )/*, array(
     'attachment' => array('/path/to/file.txt', '/path/to/file.txt')
 )*/);
+
+echo "sent";
 
 ?>
