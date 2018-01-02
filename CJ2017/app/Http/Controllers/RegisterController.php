@@ -38,7 +38,10 @@ class RegisterController extends Controller
             $events_json = Storage::disk('local')->get('events.json');
             $events_json = json_decode($events_json, true);
 
-            return Response::json(array('success' => true, 'last_insert_id' => $new_parti->id, 'tribe' => $this_tribe, 'events' => $events_json), 200);
+            $officials_json = Storage::disk('local')->get('officials.json');
+            $officials_json = json_decode($officials_json, true);
+
+            return Response::json(array('success' => true, 'last_insert_id' => $new_parti->id, 'tribe' => $this_tribe, 'events' => $events_json, 'officials' => $officials_json), 200);
         } else {
             return Response::json(array('success' => false, 'reason' => 'exists'), 200);
         }
@@ -49,12 +52,38 @@ class RegisterController extends Controller
 
     }
 
+    public function getMarkAsArrived(){
+
+        $participant = \App\cj2017_participant::where('ID', '=', Request::get('id'))->first();
+        
+        if($participant === null){
+
+            //means this user doesn't exist
+            //return Response::json(array('success' => false, 'reason' => 'no exist'), 200);
+        } else {
+
+            DB::table('cj2017_participants')
+            ->where('id', Request::get('id'))  // find your user by their email
+            ->limit(1)  // optional - to ensure only one record is updated.
+            ->update(array('Status' => 'Arrived'));
+
+            //$participant->Status = 'Arrived';
+            //$participant->save();
+
+            return Response::json(array('success' => true), 200);
+        }
+
+    }
+
     public function getEventsData(){
 
         $events_json = Storage::disk('local')->get('events.json');
         $events_json = json_decode($events_json, true);
 
-        return Response::json(array('success' => true, 'events' => $events_json), 200);
+        $officials_json = Storage::disk('local')->get('officials.json');
+        $officials_json = json_decode($officials_json, true);
+
+        return Response::json(array('success' => true, 'events' => $events_json, 'officials' => $officials_json), 200);
 
     }
 
@@ -70,8 +99,11 @@ class RegisterController extends Controller
 
             $events_json = Storage::disk('local')->get('events.json');
             $events_json = json_decode($events_json, true);
+
+            $officials_json = Storage::disk('local')->get('officials.json');
+            $officials_json = json_decode($officials_json, true);
             
-            return Response::json(array('success' => true, 'participant' => $participant, 'events' => $events_json), 200);
+            return Response::json(array('success' => true, 'participant' => $participant, 'events' => $events_json, 'officials' => $officials_json), 200);
 
         }
     }
